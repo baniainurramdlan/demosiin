@@ -7,6 +7,17 @@ $config = [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'components' => [
+            'assetManager' => [
+        'bundles' => [
+            'dosamigos\google\maps\MapAsset' => [
+                'options' => [
+                    'key' => 'AIzaSyAdykaew-W5Ay69WYUZB4zjdd0B0_ODg10',
+                    'language' => 'id',
+                    'version' => '3.1.18'
+                ]
+            ]
+        ]
+    ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'WovaPGAmg5wHagF3kpaNcSBc70k5W8ui',
