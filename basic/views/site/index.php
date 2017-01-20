@@ -18,10 +18,10 @@ $this->title = 'My Yii Application';
 
         <div class="row">
             <div class="col-md-3">
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Budget &raquo;</a></p>
+                <p><a class="btn btn-default" href="<?php echo \yii\helpers\Url::to(['/budget']); ?>">Budget &raquo;</a></p>
             </div>
             <div class="col-md-3">
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">SDM &raquo;</a></p>
+                <p><a class="btn btn-default" href="<?php echo \yii\helpers\Url::to(['/sdm']); ?>">SDM &raquo;</a></p>
             </div>
             <div class="col-md-3">
                 <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Lembaga &raquo;</a></p>
