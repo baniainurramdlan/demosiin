@@ -1,0 +1,5 @@
+{
+    "require": {
+        "fedemotta/yii2-widget-datatables": "*"
+    }
+}
