@@ -62,7 +62,24 @@ class SdmController extends Controller
         ]);
 
         $map->width = 1000;
-        $map->height = 400;
+        $map->height = 300;
+
+        // Lets add a marker now
+        $marker = new Marker([
+            'position' => $coord,
+            'title' => 'My Home Town',
+            //'icon'=>'@web/images/icon-budget.png',
+        ]);
+
+        // Provide a shared InfoWindow to the marker
+        $marker->attachInfoWindow(
+            new InfoWindow([
+                'content' => '<p>Welcome to Sistem Informasi Iptek Nasional <a href="index.php?r=budget">(Click Here)</a></p>'
+            ])
+        );
+
+        // Add marker to the map
+        $map->addOverlay($marker);
 
         return $this->render('index', [
             'searchModel' => $searchModel,

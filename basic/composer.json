@@ -18,7 +18,9 @@
         "yiisoft/yii2": "~2.0.5",
         "yiisoft/yii2-bootstrap": "~2.0.0",
         "yiisoft/yii2-swiftmailer": "~2.0.0",
-        "2amigos/yii2-google-maps-library" : "*"
+        "2amigos/yii2-google-maps-library" : "*",
+        "sjaakp/yii2-gcharts": "*"
+
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
