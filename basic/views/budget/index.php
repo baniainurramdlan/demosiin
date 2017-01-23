@@ -7,20 +7,31 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\BudgetSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Budgets';
-$this->params['breadcrumbs'][] = $this->title;
+$this->title = 'SIIN - Budget';
+//$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="budget-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+    <!-- <h1><?= Html::encode($this->title) ?></h1> -->
+    <?php echo $this->render('_search', ['model' => $searchModel]); ?>
 
+    <div class="row">
+      <div class="col-sm-12 col-centered">
+        <div class="jumbotron">
+          <div class="container">
+            <div class="absolute" style="position: absolute; top:10px; border: 10px solid black"><?=$map->display()?></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!--
     <p>
         <?= Html::a('Create Budget', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
+        //'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
@@ -32,4 +43,5 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
+    -->
 </div>

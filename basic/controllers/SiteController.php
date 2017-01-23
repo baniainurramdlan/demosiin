@@ -74,10 +74,14 @@ class SiteController extends Controller {
         $map = new Map([
             'center' => $coord,
             'zoom' => 4,
+            'scrollwheel' => false,
+            'mapTypeControl' => false,
+            'scaleControl' => false,
+            'draggable' => false,
         ]);
 
         $map->width = 1000;
-        $map->height = 400;
+        $map->height = 300;
 
         return $this->render('index',[
             'map'=>$map,
