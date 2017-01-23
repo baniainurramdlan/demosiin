@@ -76,9 +76,9 @@ class SiteController extends Controller {
             'zoom' => 4,
         ]);
 
-        $map->width = 800;
+        $map->width = 1000;
         $map->height = 400;
-        
+
         return $this->render('index',[
             'map'=>$map,
         ]);
