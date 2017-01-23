@@ -56,7 +56,7 @@ class AdminController extends \yii\web\Controller
         }
     }
 
-    public function actionViewSdm($id)
+    public function actionView($id)
     {
     	$this->layout = 'main_admin';
         return $this->render('view-sdm', [

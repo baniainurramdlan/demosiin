@@ -273,7 +273,7 @@ AdminAsset::register($this);
           </ul>
         </li>
         <li>
-          <a href="index.php?r=/admin/sdm">
+          <a href="index.php?r=/admin-sdm">
             <i class="fa fa-user"></i> <span>SDM</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-green">new</small>
