@@ -19,7 +19,7 @@ $this->title = 'SIIN - Budget';
       <div class="col-sm-12 col-centered">
         <div class="jumbotron">
           <div class="container">
-            <div class="absolute" style="position: absolute; top:10px; border: 10px solid black"><?=$map->display()?></div>
+            <div class="absolute"><?=$map->display()?></div>
           </div>
         </div>
       </div>
