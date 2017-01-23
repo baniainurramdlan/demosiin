@@ -12,7 +12,7 @@ $this->title = 'SIIN - Home';
 <div class="row">
   <div class="col-md-12 col-centered">
     <div class="jumbotron">
-        <div class="absolute" style="border: 10px solid black"><?=$map->display()?></div>
+        <div class="absolute"><?=$map->display()?></div>
     </div>
   </div>
 </div>

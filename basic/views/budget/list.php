@@ -14,18 +14,7 @@ $this->title = 'SIIN - Budget';
 
     <!-- <h1><?= Html::encode($this->title) ?></h1> -->
     <?php echo $this->render('_search', ['model' => $searchModel]); ?>
-
-    <div class="row">
-      <div class="col-sm-12 col-centered">
-        <div class="jumbotron">
-          <div class="container">
-            <div class="absolute"><?=$map->display()?></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-<!--
+    
     <p>
         <?= Html::a('Create Budget', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
@@ -43,5 +32,4 @@ $this->title = 'SIIN - Budget';
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
-    -->
 </div>
