@@ -69,4 +69,17 @@ class BudgetSearch extends Budget
 
         return $dataProvider;
     }
+
+    public function searchGrafik()
+    {
+        $query = Budget::find();
+
+        // add conditions that should always apply here
+
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+        ]);
+
+        return $dataProvider;
+    }
 }

@@ -62,7 +62,7 @@ class BudgetController extends Controller
         ]);
 
         $map->width = 1000;
-        $map->height = 400;
+        $map->height = 300;
 
         // Lets add a marker now
         $marker = new Marker([
@@ -74,7 +74,7 @@ class BudgetController extends Controller
         // Provide a shared InfoWindow to the marker
         $marker->attachInfoWindow(
             new InfoWindow([
-                'content' => '<p>Welcome to Sistem Informasi Iptek Nasional</p>'
+                'content' => '<p>11.000.000 Meteorologi Ristekdikti <a href="index.php?r=budget/list">(Click Here)</a></p>'
             ])
         );
 
@@ -98,6 +98,17 @@ class BudgetController extends Controller
             'dataProvider' => $dataProvider,
         ]);
     }
+
+    public function actionGrafik()
+    {
+      $searchModel = new BudgetSearch();
+      $dataProvider = $searchModel->searchGrafik();
+
+      return $this->render('grafik', [
+          'dataProvider' => $dataProvider
+      ]);
+    }
+
 
     /**
      * Displays a single Budget model.
