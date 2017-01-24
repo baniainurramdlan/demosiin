@@ -70,30 +70,31 @@ class SiteController extends Controller {
      * @return string
      */
     public function actionIndex() {
-        $coord = new LatLng(['lat' => -2.920908, 'lng' => 121.378551    ]);
+        
+        $coord = new LatLng(['lat' => -2.245933, 'lng' => 119.481006 ]);
         $map = new Map([
             'center' => $coord,
-            'zoom' => 4,
+            'zoom' => 5,
             'scrollwheel' => false,
             'mapTypeControl' => false,
             'scaleControl' => false,
             'draggable' => true,
         ]);
 
-        $map->width = 1000;
-        $map->height = 300;
+        $map->width = '100%';
+        $map->height = 400;
 
         // Lets add a marker now
         $marker = new Marker([
             'position' => $coord,
-            'title' => 'My Home Town',
+            'title' => 'Sistem Informasi Iptek Nasional',
             //'icon'=>'@web/images/icon-budget.png',
         ]);
 
         // Provide a shared InfoWindow to the marker
         $marker->attachInfoWindow(
             new InfoWindow([
-                'content' => '<p>Welcome to Sistem Informasi Iptek Nasional <a href="index.php?r=budget">(Click Here)</a></p>'
+                'content' => '<center><p><h3>Welcome to Sistem Informasi Iptek Nasional<br /><a href="about">(Click Here)</a></h3></p></center>'
             ])
         );
 

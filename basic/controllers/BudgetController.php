@@ -51,18 +51,18 @@ class BudgetController extends Controller
         $searchModel = new BudgetSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-        $coord = new LatLng(['lat' => -2.920908, 'lng' => 121.378551    ]);
+        $coord = new LatLng(['lat' => -2.245933, 'lng' => 119.481006 ]);
         $map = new Map([
             'center' => $coord,
-            'zoom' => 4,
+            'zoom' => 5,
             'scrollwheel' => false,
             'mapTypeControl' => false,
             'scaleControl' => false,
-            'draggable' => false,
+            'draggable' => true,
         ]);
 
-        $map->width = 1000;
-        $map->height = 300;
+        $map->width = '100%';
+        $map->height = 400;
 
 
         // Lets add a marker now 1
@@ -75,7 +75,7 @@ class BudgetController extends Controller
         // Provide a shared InfoWindow to the marker
         $marker->attachInfoWindow(
             new InfoWindow([
-                'content' => '<p>11.000.000 Meteorologi Ristekdikti <a href="index.php?r=budget/list">(Click Here)</a></p>'
+                'content' => '<p>11.000.000 Meteorologi Ristekdikti <a href="budget/list">(Click Here)</a></p>'
             ])
         );
 
@@ -95,7 +95,7 @@ class BudgetController extends Controller
         // Provide a shared InfoWindow to the marker
         $marker->attachInfoWindow(
             new InfoWindow([
-                'content' => '<p>20.000.000 Bioteknologi Unicef <a href="index.php?r=budget/list">(Click Here)</a></p>'
+                'content' => '<p>20.000.000 Bioteknologi Unicef <a href="budget/list">(Click Here)</a></p>'
             ])
         );
 
@@ -114,7 +114,7 @@ class BudgetController extends Controller
         // Provide a shared InfoWindow to the marker
         $marker->attachInfoWindow(
             new InfoWindow([
-                'content' => '<p>30.000.000 Geologi Biofuel <a href="index.php?r=budget/list">(Click Here)</a></p>'
+                'content' => '<p>30.000.000 Geologi Biofuel <a href="budget/list">(Click Here)</a></p>'
             ])
         );
 

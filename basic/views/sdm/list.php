@@ -14,13 +14,19 @@ $this->title = 'SIIN - List SDM';
 
     <!-- <h1><?= Html::encode($this->title) ?></h1> -->
 
+    <div class="row" style="padding-top: 20px; padding-bottom: 20px;">
+     <div class="col-sm-12 col-centered">
+         <div class="container">
     <?php echo $this->render('_search', ['model' => $searchModel]); ?>
-
+         </div>
+     </div>
+   </div>
     <p>
         <!-- <?= Html::a('Create Budget', ['create'], ['class' => 'btn btn-success']) ?> -->
     </p>
 
     <br />
+    <div class="container">
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         //'filterModel' => $searchModel,
@@ -44,4 +50,5 @@ $this->title = 'SIIN - List SDM';
             //['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
+    </div>
 </div>

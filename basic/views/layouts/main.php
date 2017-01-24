@@ -27,9 +27,9 @@ AdminAsset::register($this);
 <div class="wrapper">
   <header class="main-header">
 
-    <a href="index2.html" class="logo">
+    <a href="<?php echo \yii\helpers\Url::to(['/site/index']); ?>" class="logo">
       <span class="logo-mini"><b>S</b>IIN</span>
-       <span class="logo-lg"><b></b>SIIN</span>
+       <span class="logo-lg"><b></b>SIIN (logo)</span>
     </a>
 
     <nav class="navbar navbar-static-top">
@@ -37,28 +37,28 @@ AdminAsset::register($this);
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
           <li class="messages-menu">
-            <a href="<?php echo \yii\helpers\Url::to(['index']); ?>" class="">
+            <a href="<?php echo \yii\helpers\Url::to(['/site/index']); ?>" class="">
               <i class="fa fa-home"></i>
               &nbsp;<span class="">Home</span>
             </a>
           </li>
           <!-- Notifications: style can be found in dropdown.less -->
           <li class="messages-menu">
-            <a href="<?php echo \yii\helpers\Url::to(['about']); ?>" class="">
+            <a href="<?php echo \yii\helpers\Url::to(['/site/about']); ?>" class="">
               <i class="fa fa-black-tie"></i>
               &nbsp;<span class="">About Us</span>
             </a>
           </li>
          
           <li class="messages-menu">
-            <a href="<?php echo \yii\helpers\Url::to(['contact']); ?>" class="">
+            <a href="<?php echo \yii\helpers\Url::to(['/site/contact']); ?>" class="">
               <i class="fa fa-address-book-o"></i>
               &nbsp;<span class="">Contact</span>
             </a>
           </li>
           
           <li class="messages-menu">
-            <a href="<?php echo \yii\helpers\Url::to(['login']); ?>" class="">
+            <a href="<?php echo \yii\helpers\Url::to(['/site/login']); ?>" class="">
               <i class="fa fa-user-circle"></i>
               &nbsp;<span class="">Login</span>
             </a>
@@ -68,12 +68,12 @@ AdminAsset::register($this);
 
     </nav>
   </header>
-    <div class="" style="background-color: #ecf0f1;">
+    <div class="" style="background-color: #ecf0f1; min-height: 550px;">
     <?= $content ?>
     </div>
 </div>
 
-<footer class="footer">
+<footer class="footer navbar-fixed-bottom">
     <div class="container">
         <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
 
