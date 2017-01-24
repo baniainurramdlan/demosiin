@@ -89,6 +89,7 @@ class AdminSdmController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
+             $this->layout = 'main_admin'; 
             return $this->render('update', [
                 'model' => $model,
             ]);

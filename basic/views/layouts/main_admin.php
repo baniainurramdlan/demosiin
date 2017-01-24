@@ -281,7 +281,7 @@ AdminAsset::register($this);
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="<?php echo \yii\helpers\Url::to(['/admin-lembaga']); ?>">
             <i class="fa fa-university"></i> <span>Lembaga</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-green"></small>
