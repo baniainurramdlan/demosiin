@@ -10,7 +10,7 @@ use yii\widgets\DetailView;
 $this->params['breadcrumbs'][] = ['label' => 'Lembagas', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="lembaga-view"  style="padding-right:1.5cm; padding-left:0.8cm; padding-top:0.5cm;">
+<div class="output-view"  style="padding-right:1.5cm; padding-left:0.8cm; padding-top:0.5cm;">
     <h2>
     Detail Data Lembaga
   </h2><br>

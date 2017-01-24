@@ -43,7 +43,7 @@ use yii\widgets\ActiveForm;
             </div>
                <div class="col-md-4">
                 <?= $form->field($model, 'lembaga') 
-                    ->dropDownList($bl)
+                    ->dropDownList($sdm)
                 ?>
             </div>
         </div>

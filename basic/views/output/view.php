@@ -10,11 +10,22 @@ $this->title = $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Sdms', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="sdm-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+<div class="sdm-view" style="padding-right:1.5cm; padding-left:0.8cm; padding-top:0.5cm;">
+ <h2>
+    Detail Output
+  </h2><br>
+  
+  <ol class="breadcrumb">
+    <li><a href="#"><i class="fa fa-home"></i>Home</a></li>
+    <li class="active">Output</li>
+  </ol>
 
     <p>
+        <div class="sdm-index">
+        <div class="sdm-update">
+            <div class="box">
+                <div class="box-header with-border">
         <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
         <?= Html::a('Delete', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
@@ -28,7 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'id',
+            // 'id',
             'nama',
             'gelar',
             'lembaga',
@@ -36,4 +47,10 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]) ?>
 
+
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
