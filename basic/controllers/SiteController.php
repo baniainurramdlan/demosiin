@@ -71,7 +71,7 @@ class SiteController extends Controller {
      */
     public function actionIndex() {
         if (!Yii::$app->user->isGuest){
-            $this->redirect(['/sdm/index']);
+            $this->redirect(['/admin-sdm/index']);
         }
         $coord = new LatLng(['lat' => -2.245933, 'lng' => 119.481006 ]);
         $map = new Map([
