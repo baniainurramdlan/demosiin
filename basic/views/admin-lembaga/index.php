@@ -15,10 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="col-md-12">
     <div class="sdm-index">
 
-         <h1>
-    Lembaga
-    <!-- <small>Version 2.0</small> -->
-  </h1>
+    <h1> Lembaga</h1>
   <ol class="breadcrumb">
     <li><a href="#"><i class=""></i>Lembaga 1</a></li>
     <li class="active">Lembaga 2</li>

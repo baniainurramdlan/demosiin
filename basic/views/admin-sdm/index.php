@@ -31,7 +31,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="box-header with-border">
             <p><?= Html::a('Create Sdm', ['create'], ['class' => 'btn btn-success']) ?></p>
 
-        <?= DataTables::widget([
+        <?= GridView::widget([
             'dataProvider' => $dataProvider,
             // 'filterModel' => $searchModel,
             'columns' => [

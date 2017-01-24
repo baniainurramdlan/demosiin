@@ -14,9 +14,10 @@ $this->params['breadcrumbs'][] = $this->title;
     <h2>
     Detail Data Lembaga
   </h2><br>
+  
   <ol class="breadcrumb">
-    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-    <li class="active">Lembaga</li>
+    <li><a href="#"><i class=""></i>Lembaga 1</a></li>
+    <li class="active">Lembaga 2</li>
   </ol>
     <h1><?= Html::encode($this->title) ?></h1>
 

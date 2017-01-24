@@ -26,6 +26,19 @@ class AdminSdmController extends Controller
                     'delete' => ['POST'],
                 ],
             ],
+              'access' => [
+                'class' => \yii\filters\AccessControl::className(),
+                'only' => ['create', 'update', 'index'],
+                'rules' => [
+
+                    [
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+
+                ],
+
+            ],
         ];
     }
 

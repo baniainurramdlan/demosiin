@@ -11,13 +11,13 @@ $this->params['breadcrumbs'][] = ['label' => 'Sdms', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="sdm-view" style="padding-right:1.5cm; padding-left:0.8cm; padding-top:0.5cm;">
-      <h2>
+    <h2>
     Detail Data SDM
     <!-- <small>Version 2.0</small> -->
   </h2><br>
   <ol class="breadcrumb">
     <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-    <li class="active">SDM</li>
+    <li class="active">SDM Lembaga</li>
   </ol>
     <h1><?= Html::encode($this->title) ?></h1>
 
