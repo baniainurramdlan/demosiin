@@ -8,13 +8,22 @@ use fedemotta\datatables\DataTables;
 /* @var $searchModel app\models\SdmSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Sdms';
+// $this->title = 'Sdms';
+
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-
+<div class="container" style="padding-right:1.5cm; padding-left:0.8cm;">
 <div class="row">
 <div class="col-md-12">
     <div class="sdm-index">
+     <h1>
+    SDM
+    <!-- <small>Version 2.0</small> -->
+  </h1>
+  <ol class="breadcrumb">
+    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+    <li class="active">SDM</li>
+  </ol>
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php  echo $this->render('_search', ['model' => $searchModel]); ?>
@@ -28,7 +37,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'columns' => [
                 ['class' => 'yii\grid\SerialColumn'],
 
-                'id',
+                // 'id',
                 'nama',
                 'gelar',
                 'lembaga',
@@ -44,3 +53,5 @@ $this->params['breadcrumbs'][] = $this->title;
 </div>
 </div>
 </div>
+
+</div> 

@@ -260,17 +260,14 @@ AdminAsset::register($this);
       <ul class="sidebar-menu">
         <li class="header">MAIN NAVIGATION</li>
         <li class="treeview">
-          <a href="#">
-            <i class="fa fa-home"></i>
-            <span>Home</span>
+          
+          <li>
+          <a href="<?php echo \yii\helpers\Url::to(['/admin']); ?>">
+            <i class="fa fa-home"></i> <span>Dashboard</span>
             <span class="pull-right-container">
-              <span class="label label-primary pull-right">4</span>
+              <small class="label pull-right bg-green">new</small>
             </span>
           </a>
-          <ul class="treeview-menu">
-            <li><a href="<?php echo \yii\helpers\Url::to(['/admin']); ?>"><i class="fa fa-circle-o"></i>Dashboard</a></li>
-            <li><a href="<?php echo \yii\helpers\Url::to(['/admin']); ?>"><i class="fa fa-circle-o"></i>Timeline</a></li>
-          </ul>
         </li>
         <li>
           <a href="<?php echo \yii\helpers\Url::to(['/admin-sdm']); ?>">
@@ -289,7 +286,7 @@ AdminAsset::register($this);
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="<?php echo \yii\helpers\Url::to(['/admin-departemen']); ?>">
             <i class="fa fa-file-text"></i> <span>Output</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-green"></small>
@@ -297,7 +294,7 @@ AdminAsset::register($this);
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="<?php echo \yii\helpers\Url::to(['/admin-peneliti']); ?>">
             <i class="fa fa-calendar-plus-o"></i> <span>Aktivitas</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-green"></small>
