@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\BudgetSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'SIIN - SDM';
+$this->title = 'SIIN - List SDM';
 //$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="sdm-index">

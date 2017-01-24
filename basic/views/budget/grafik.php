@@ -6,7 +6,7 @@ use sjaakp\gcharts\ColumnChart;
 /* @var $searchModel app\models\BudgetSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'SIIN - Budget';
+$this->title = 'SIIN - Grafik Bar';
 //$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="budget-index">
