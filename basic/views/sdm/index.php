@@ -13,13 +13,16 @@ $this->title = 'SIIN - SDM';
 <div class="sdm-index">
 
     <!-- <h1><?= Html::encode($this->title) ?></h1> -->
+    
+    <div class="row" style="padding-top: 20px; padding-bottom: 20px;">
+     <div class="col-sm-12 col-centered">
     <?php echo $this->render('_search', ['model' => $searchModel]); ?>
+     </div>
+   </div>
 
     <div class="row">
       <div class="col-sm-12 col-centered">
-        <div class="jumbotron">
-            <div class="absolute"><?=$map->display()?></div>
-        </div>
+        <?=$map->display()?>
       </div>
     </div>
 

@@ -12,6 +12,7 @@ use Yii;
  * @property string $sumber
  * @property string $lembaga
  * @property string $subject
+ * @property integer $tahun
  */
 class Budget extends \yii\db\ActiveRecord
 {
@@ -29,8 +30,9 @@ class Budget extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['dana', 'sumber', 'lembaga', 'subject'], 'required'],
+            [['dana', 'sumber', 'lembaga', 'subject', 'tahun'], 'required'],
             [['dana'], 'number'],
+            [['tahun'], 'integer'],
             [['sumber', 'lembaga', 'subject'], 'string', 'max' => 100],
         ];
     }
@@ -46,6 +48,7 @@ class Budget extends \yii\db\ActiveRecord
             'sumber' => 'Sumber',
             'lembaga' => 'Lembaga',
             'subject' => 'Subject',
+            'tahun' => 'Tahun',
         ];
     }
 }
