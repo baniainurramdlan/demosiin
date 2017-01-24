@@ -268,12 +268,12 @@ AdminAsset::register($this);
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="index.php?r=/admin/index"><i class="fa fa-circle-o"></i>Dashboard</a></li>
-            <li><a href="index.php?r=/admin/timeline"><i class="fa fa-circle-o"></i>Timeline</a></li>
+            <li><a href="<?php echo \yii\helpers\Url::to(['/admin']); ?>"><i class="fa fa-circle-o"></i>Dashboard</a></li>
+            <li><a href="<?php echo \yii\helpers\Url::to(['/admin']); ?>"><i class="fa fa-circle-o"></i>Timeline</a></li>
           </ul>
         </li>
         <li>
-          <a href="index.php?r=/admin-sdm">
+          <a href="<?php echo \yii\helpers\Url::to(['/admin-sdm']); ?>">
             <i class="fa fa-user"></i> <span>SDM</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-green">new</small>

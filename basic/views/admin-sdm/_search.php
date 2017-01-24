@@ -15,19 +15,50 @@ use yii\widgets\ActiveForm;
         'method' => 'get',
     ]); ?>
 
+
+    <?php
+     $sdm= yii\helpers\ArrayHelper::map(
+            app\models\Sdm::find()->all()
+            ,'id'
+            ,function($model, $defaultValue){
+                return $model['lembaga'];
+            }
+            );
+
+      $bl= yii\helpers\ArrayHelper::map(
+            app\models\Sdm::find()->all()
+            ,'id'
+            ,function($model, $defaultValue){
+                return $model['bidang_ilmu'];
+            }
+            );
+       $gelar= yii\helpers\ArrayHelper::map(
+            app\models\Sdm::find()->all()
+            ,'id'
+            ,function($model, $defaultValue){
+                return $model['gelar'];
+            }
+            );
+    ?>
+
  <div class="box">
     <div class="box-header with-border">
         <div class="row">
             <div class="col-md-4">
-                <?= $form->field($model, 'gelar') ?>
+                <?= $form->field($model, 'bidang_ilmu') 
+                    ->dropDownList($bl)
+                ?>
             </div>
              <div class="col-md-4">
-                <?= $form->field($model, 'lembaga') ?>
+                <?= $form->field($model, 'lembaga') 
+                    ->dropDownList($sdm)
+                ?>
             </div>
-            <div class="col-md-4">
-                <?= $form->field($model, 'bidang_ilmu') ?>
+             <div class="col-md-4">
+                <?= $form->field($model, 'gelar') 
+                     ->dropDownList($gelar)
+                ?>
             </div>
-            
         </div> 
 
        <div class="form-group">
