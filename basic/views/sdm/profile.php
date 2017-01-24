@@ -1,5 +1,6 @@
 <?php
 use yii\helpers\Html;
+use yii\widgets\DetailView;
 
 $this->title = 'SIIN - Profile';
 
@@ -12,8 +13,10 @@ $this->title = 'SIIN - Profile';
     </center>
     </div>
     <div class="col-md-9">
-      <h3>BANTI AGUSTINA MANALU</h3>
-      <p><span class="glyphicon glyphicon-home" aria-hidden="true"></span> &nbsp; <strong>BPPT &nbsp; BIOTEKNOLOGI</strong></p>
+      <h3>
+      <?php echo $model -> {'nama'} ." ". $model -> {'gelar'}; ?>
+      </h3>
+      <p><span class="glyphicon glyphicon-home" aria-hidden="true"></span> &nbsp; <strong><?php echo $model -> {'lembaga'} ?>&nbsp;<?php echo $model -> {'bidang_ilmu'} ?></strong></p>
       Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
     </div>
   </div>

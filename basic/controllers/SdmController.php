@@ -137,14 +137,10 @@ class SdmController extends Controller
         ]);
     }
 
-    public function actionProfile()
+    public function actionProfile($id)
     {
-        $searchModel = new SdmSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
-        return $this->render('profile', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
+       return $this->render('profile', [
+            'model' => $this->findModel($id),
         ]);
     }
 
