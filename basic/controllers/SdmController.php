@@ -74,7 +74,45 @@ class SdmController extends Controller
         // Provide a shared InfoWindow to the marker
         $marker->attachInfoWindow(
             new InfoWindow([
-                'content' => '<p>Welcome to Sistem Informasi Iptek Nasional <a href="index.php?r=budget">(Click Here)</a></p>'
+                'content' => '<p>Sulawesi <a href="index.php?r=sdm/list">(Click Here)</a></p>'
+            ])
+        );
+
+        // Add marker to the map
+        $map->addOverlay($marker);
+
+        // Lets add a marker now 2
+        $coord2 = new LatLng(['lat' => -6.121435, 'lng' => 106.774124    ]);
+
+        $marker = new Marker([
+            'position' => $coord2,
+            'title' => 'My Home Town',
+            //'icon'=>'@web/images/icon-budget.png',
+        ]);
+
+        // Provide a shared InfoWindow to the marker
+        $marker->attachInfoWindow(
+            new InfoWindow([
+                'content' => '<p>Jakarta <a href="index.php?r=sdm/list">(Click Here)</a></p>'
+            ])
+        );
+
+        // Add marker to the map
+        $map->addOverlay($marker);
+
+        // Lets add a marker now 3
+        $coord3 = new LatLng(['lat' => -8.409518, 'lng' => 	115.188919    ]);
+
+        $marker = new Marker([
+            'position' => $coord3,
+            'title' => 'My Home Town',
+            //'icon'=>'@web/images/icon-budget.png',
+        ]);
+
+        // Provide a shared InfoWindow to the marker
+        $marker->attachInfoWindow(
+            new InfoWindow([
+                'content' => '<p>Bali <a href="index.php?r=sdm/list">(Click Here)</a></p>'
             ])
         );
 
@@ -85,6 +123,17 @@ class SdmController extends Controller
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
             'map'=>$map,
+        ]);
+    }
+
+    public function actionList()
+    {
+        $searchModel = new SdmSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        return $this->render('list', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
         ]);
     }
 

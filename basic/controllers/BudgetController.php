@@ -64,7 +64,8 @@ class BudgetController extends Controller
         $map->width = 1000;
         $map->height = 300;
 
-        // Lets add a marker now
+
+        // Lets add a marker now 1
         $marker = new Marker([
             'position' => $coord,
             'title' => 'My Home Town',
@@ -80,6 +81,46 @@ class BudgetController extends Controller
 
         // Add marker to the map
         $map->addOverlay($marker);
+
+
+        // Lets add a marker now 2
+        $coord2 = new LatLng(['lat' => -6.121435, 'lng' => 106.774124    ]);
+
+        $marker = new Marker([
+            'position' => $coord2,
+            'title' => 'My Home Town',
+            //'icon'=>'@web/images/icon-budget.png',
+        ]);
+
+        // Provide a shared InfoWindow to the marker
+        $marker->attachInfoWindow(
+            new InfoWindow([
+                'content' => '<p>20.000.000 Bioteknologi Unicef <a href="index.php?r=budget/list">(Click Here)</a></p>'
+            ])
+        );
+
+        // Add marker to the map
+        $map->addOverlay($marker);
+
+        // Lets add a marker now 3
+        $coord3 = new LatLng(['lat' => -8.409518, 'lng' => 	115.188919    ]);
+
+        $marker = new Marker([
+            'position' => $coord3,
+            'title' => 'My Home Town',
+            //'icon'=>'@web/images/icon-budget.png',
+        ]);
+
+        // Provide a shared InfoWindow to the marker
+        $marker->attachInfoWindow(
+            new InfoWindow([
+                'content' => '<p>30.000.000 Geologi Biofuel <a href="index.php?r=budget/list">(Click Here)</a></p>'
+            ])
+        );
+
+        // Add marker to the map
+        $map->addOverlay($marker);
+
 
         return $this->render('index', [
             'searchModel' => $searchModel,
@@ -103,8 +144,24 @@ class BudgetController extends Controller
     {
       $searchModel = new BudgetSearch();
       $dataProvider = $searchModel->searchGrafik();
+      // echo '<pre>';
+      // print_r($dataProvider);
+      // exit;
 
       return $this->render('grafik', [
+          'dataProvider' => $dataProvider
+      ]);
+    }
+
+    public function actionGrafikLine()
+    {
+      $searchModel = new BudgetSearch();
+      $dataProvider = $searchModel->searchGrafik();
+      // echo '<pre>';
+      // print_r($dataProvider);
+      // exit;
+
+      return $this->render('grafik-line', [
           'dataProvider' => $dataProvider
       ]);
     }

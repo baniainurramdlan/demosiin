@@ -7,22 +7,19 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\BudgetSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'SIIN - Budget';
+$this->title = 'SIIN - SDM';
 //$this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="budget-index">
+<div class="sdm-index">
 
     <!-- <h1><?= Html::encode($this->title) ?></h1> -->
 
-    <?php //echo $this->render('_search', ['model' => $searchModel]); ?>
+    <?php echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
         <!-- <?= Html::a('Create Budget', ['create'], ['class' => 'btn btn-success']) ?> -->
     </p>
 
-    <p>
-        Dana : Rp. 10.000.000 &nbsp; <a type="button" class="btn btn-primary btn-sm" href="index.php?r=budget/grafik"><span class="glyphicon glyphicon-stats" aria-hidden="true"> Grafik</a></span>
-    </p>
     <br />
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -31,10 +28,18 @@ $this->title = 'SIIN - Budget';
             ['class' => 'yii\grid\SerialColumn'],
 
             //'id',
-            'dana',
-            'sumber',
+            //'nama',
+
+            [
+           'label'=>'nama',
+           'format' => 'raw',
+       'value'=>function ($data) {
+            return Html::a($data->nama,['sdm/profile','id'=>$data->id]);
+        },
+    ],
+            'gelar',
             'lembaga',
-            'tahun',
+            'bidang_ilmu',
 
             //['class' => 'yii\grid\ActionColumn'],
         ],
