@@ -150,7 +150,7 @@ AdminAsset::register($this);
           </a>
         </li>
          <li>
-           <a href="<?php echo \yii\helpers\Url::to(['/output']); ?>">
+           <a href="<?php echo \yii\helpers\Url::to(['/user-manajemen']); ?>">
             <i class="fa fa-users"></i> <span>User Management</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-green"></small>
