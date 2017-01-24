@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use sjaakp\gcharts\ColumnChart;
+
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\BudgetSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -14,18 +15,14 @@ $this->title = 'SIIN - Grafik Bar';
     <!-- <h1><?= Html::encode($this->title) ?></h1> -->
 
     <?php //echo $this->render('_search', ['model' => $searchModel]); ?>
+    
+    <!-- <?= Html::a('Create Budget', ['create'], ['class' => 'btn btn-success']) ?> -->
 
-    <p>
-        <!-- <?= Html::a('Create Budget', ['create'], ['class' => 'btn btn-success']) ?> -->
-    </p>
-
-    <p>
-        Dana : Rp. 10.000.000 &nbsp; <a type="button" class="btn btn-primary btn-sm" href="<?php echo \yii\helpers\Url::to(['/budget/list']); ?>"><span class="glyphicon glyphicon-stats" aria-hidden="true">&nbsp;</span>List</a>
-    </p>
-
-  <div class="row">
+  <div class="row" style="padding-top: 20px; padding-bottom: 20px;">
   <div class="container">
-  <div class="col-md-4"></div>
+      <div class="col-md-4">
+        Dana : Rp. 10.000.000 &nbsp; <a type="button" class="btn btn-primary btn-sm" href="<?php echo \yii\helpers\Url::to(['/budget/list']); ?>"><span class="glyphicon glyphicon-stats" aria-hidden="true">&nbsp;</span>List</a>
+      </div>
   <div class="col-md-4">
     <?php
     echo Html::dropDownList('listname', null, [''=>'','totalfund'=>'Total Funding', 'cumulativefund'=>'Cumulative Funding'], ['class' => 'form-control', 'onchange'=>'javascript:pindah()','id'=>'idlistname']);
@@ -45,6 +42,8 @@ $this->title = 'SIIN - Grafik Bar';
   </div>
   </div>
     <br />
+    
+      <div class="container">
       <?= ColumnChart::widget([
       'height' => '400px',
       'dataProvider' => $dataProvider,
@@ -58,4 +57,5 @@ $this->title = 'SIIN - Grafik Bar';
         'title' => 'Total Funding',
       ],
       ]) ?>
+      </div>
 </div>

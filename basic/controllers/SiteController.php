@@ -94,7 +94,7 @@ class SiteController extends Controller {
         // Provide a shared InfoWindow to the marker
         $marker->attachInfoWindow(
             new InfoWindow([
-                'content' => '<center><p><h3>Welcome to Sistem Informasi Iptek Nasional<br /><a href="about">(Click Here)</a></h3></p></center>'
+                'content' => '<center><p><h3>Welcome to Sistem Informasi Iptek Nasional<br /><a href="site/about">(Click Here)</a></h3></p></center>'
             ])
         );
 

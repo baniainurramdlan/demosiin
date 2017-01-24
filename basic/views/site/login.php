@@ -11,6 +11,9 @@ $this->title = 'Login';
 //$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-login">
+    <div class="row">
+    <div class="container">
+    <div class="col-md-12">
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>Please fill out the following fields to login:</p>
@@ -46,4 +49,7 @@ $this->title = 'Login';
         To modify the username/password, please check out the code <code>app\models\User::$users</code>.
     </div>
   -->
+</div>
+</div>
+</div>
 </div>

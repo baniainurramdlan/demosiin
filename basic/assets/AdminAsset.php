@@ -31,13 +31,13 @@ class AdminAsset extends AssetBundle
         'js/jquery-2.2.3.min.js',
         'js/bootstrap.min.js',
         'js/fastclick.min.js',
-        'js/app.min.js',
+        //'js/app.min.js',
         'js/jquery.sparkline.min.js',
         'js/jquery-jvectormap-1.2.2.min.js',
         'js/jquery-jvectormap-world-mill-en.js',
         'js/jquery.slimscroll.min.js',
         'js/Chart.min.js',
-        'js/dashboard2.js',
+        //'js/dashboard2.js',
         'js/demo.js',
     ];
     public $depends = [

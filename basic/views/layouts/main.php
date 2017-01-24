@@ -75,7 +75,7 @@ AdminAsset::register($this);
 
 <footer class="footer navbar-fixed-bottom">
     <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
+        <p class="pull-left">&copy; Ristekdikti <?= date('Y') ?></p>
 
         <p class="pull-right"><?= Yii::powered() ?></p>
     </div>

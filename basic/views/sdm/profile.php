@@ -5,7 +5,7 @@ use yii\widgets\DetailView;
 $this->title = 'SIIN - Profile';
 
 ?>
-<div class="row">
+<div class="row" style="padding-top: 20px; padding-bottom: 20px;">
   <div class="container">
     <div class="col-md-3">
     <center>
