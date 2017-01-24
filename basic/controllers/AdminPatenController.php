@@ -37,7 +37,7 @@ class AdminPatenController extends Controller
     {
         $searchModel = new PatenSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
+        $this->layout='main_admin';
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
@@ -51,6 +51,7 @@ class AdminPatenController extends Controller
      */
     public function actionView($id)
     {
+         $this->layout='main_admin';
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
@@ -68,6 +69,7 @@ class AdminPatenController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
+             $this->layout='main_admin';
             return $this->render('create', [
                 'model' => $model,
             ]);
@@ -87,6 +89,7 @@ class AdminPatenController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
+             $this->layout='main_admin';
             return $this->render('update', [
                 'model' => $model,
             ]);
@@ -102,7 +105,7 @@ class AdminPatenController extends Controller
     public function actionDelete($id)
     {
         $this->findModel($id)->delete();
-
+         $this->layout='main_admin';
         return $this->redirect(['index']);
     }
 

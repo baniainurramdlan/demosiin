@@ -14,20 +14,35 @@ use yii\widgets\ActiveForm;
         'action' => ['index'],
         'method' => 'get',
     ]); ?>
+    <?php
+         $pap= yii\helpers\ArrayHelper::map(
+                app\models\Sdm::find()->all()
+                ,'id'
+                ,function($model, $defaultValue){
+                    return $model['lembaga'];
+                }
+                );
+        ?>
 
-    <?= $form->field($model, 'id') ?>
-
-    <?= $form->field($model, 'nama') ?>
-
-    <?= $form->field($model, 'lembaga') ?>
-
-    <?= $form->field($model, 'bidang_ilmu') ?>
+    <div class="box">
+    <div class="box-header with-border">
+        <div class="row">
+            <div class="col-md-4">
+                <?= $form->field($model, 'bidang_ilmu') 
+                    ->dropDownList($pap)
+                ?>
+            </div>
+            <div class="col-md-4">
+                 <?= $form->field($model, 'nama') ?>
+            </div>
+        </div>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
         <?= Html::resetButton('Reset', ['class' => 'btn btn-default']) ?>
     </div>
-
+</div>
+</div>
     <?php ActiveForm::end(); ?>
 
 </div>

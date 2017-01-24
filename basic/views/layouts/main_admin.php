@@ -294,7 +294,7 @@ AdminAsset::register($this);
           </a>
         </li>
         <li>
-          <a href="<?php echo \yii\helpers\Url::to(['/admin-peneliti']); ?>">
+          <a href="<?php echo \yii\helpers\Url::to(['/admin-paten']); ?>">
             <i class="fa fa-calendar-plus-o"></i> <span>Aktivitas</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-green"></small>
