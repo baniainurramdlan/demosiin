@@ -4,11 +4,13 @@
 
 use yii\helpers\Html;
 
-$this->title = 'About Sistem Informasi Iptek Nasional';
+$this->title = 'About';
 //$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-about">
-    <h1><?= Html::encode($this->title) ?></h1>
+    <div class="row">
+        <div class="container">
+    <h1>Sistem Informasi Iptek Nasional</h1>
 
     <!--
     <p>
@@ -23,12 +25,15 @@ $this->title = 'About Sistem Informasi Iptek Nasional';
   </p>
   <p>
     Data dan informasi iptek yang memenuhi kebutuhan informasi pada:
+  </p>
+  
     <ul>
         <li>UU No. 18 tahun 2002,</li>
         <li>RUU pengganti UU No. 18 tahun 2002,</li>
         <li>Renstra Kemenristekdikti tahun 2015-2019,</li>
         <li>Frascatti Manual 2015.</li>
-      </ul>
-  </p>
-
+    </ul>
+  
+        </div>
+    </div>
 </div>

@@ -142,6 +142,8 @@ class BudgetController extends Controller
 
     public function actionGrafik()
     {
+        $this->layout= 'main_original';
+        
       $searchModel = new BudgetSearch();
       $dataProvider = $searchModel->searchGrafik();
       // echo '<pre>';
