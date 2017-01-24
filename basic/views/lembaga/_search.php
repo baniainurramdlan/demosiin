@@ -23,8 +23,8 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'jumlah_departemen') ?>
     -->
-    
-      <div class="col-md-12">
+    <div class="col-md-4"></div>
+      <div class="col-md-4">
         <?= $form->field($model, 'subject') ->dropDownList ([
         ''=>''
         ,'bioteknologi'=>'Bioteknologi'

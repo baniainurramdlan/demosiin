@@ -74,7 +74,7 @@ class LembagaController extends Controller
         // Provide a shared InfoWindow to the marker
         $marker->attachInfoWindow(
             new InfoWindow([
-                'content' => '<p>Sulawesi <a href="sdm/list">(Click Here)</a></p>'
+                'content' => '<p>Sulawesi <a href="lembaga/list?id=4">(Click Here)</a></p>'
             ])
         );
 
@@ -93,7 +93,7 @@ class LembagaController extends Controller
         // Provide a shared InfoWindow to the marker
         $marker->attachInfoWindow(
             new InfoWindow([
-                'content' => '<p>Jakarta <a href="sdm/list">(Click Here)</a></p>'
+                'content' => '<p>Jakarta <a href="lembaga/list?id=3">(Click Here)</a></p>'
             ])
         );
 
@@ -112,7 +112,7 @@ class LembagaController extends Controller
         // Provide a shared InfoWindow to the marker
         $marker->attachInfoWindow(
             new InfoWindow([
-                'content' => '<p>Bali <a href="sdm/list">(Click Here)</a></p>'
+                'content' => '<p>Bali <a href="lembaga/list?id=4">(Click Here)</a></p>'
             ])
         );
 
@@ -124,6 +124,13 @@ class LembagaController extends Controller
             'dataProvider' => $dataProvider,
             'map'=>$map,
         ]);
+    }
+    
+        public function actionList($id)
+    {
+        return $this->render('list', [
+           'model' => $this->findModel($id),
+                ]);
     }
 
     /**
