@@ -27,11 +27,11 @@ $this->title = 'SIIN - Budget';
       'height' => '400px',
       'dataProvider' => $dataProvider,
       'columns' => [
-          'subject:string',
-          'dana'
+        'tahun:string',
+        'dana'
       ],
       'options' => [
-          'title' => 'Countries by Population'
+        'title' => 'Total Funding',
       ],
       ]) ?>
 </div>
