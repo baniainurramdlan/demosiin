@@ -8,7 +8,6 @@ use app\models\LembagaSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
 use dosamigos\google\maps\LatLng;
 use dosamigos\google\maps\services\DirectionsWayPoint;
 use dosamigos\google\maps\services\TravelMode;
@@ -25,13 +24,12 @@ use dosamigos\google\maps\layers\BicyclingLayer;
 /**
  * LembagaController implements the CRUD actions for Lembaga model.
  */
-class LembagaController extends Controller
-{
+class LembagaController extends Controller {
+
     /**
      * @inheritdoc
      */
-    public function behaviors()
-    {
+    public function behaviors() {
         return [
             'verbs' => [
                 'class' => VerbFilter::className(),
@@ -46,12 +44,11 @@ class LembagaController extends Controller
      * Lists all Lembaga models.
      * @return mixed
      */
-    public function actionIndex()
-    {
+    public function actionIndex() {
         $searchModel = new LembagaSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-        
-        $coord = new LatLng(['lat' => -2.245933, 'lng' => 119.481006 ]);
+
+        $coord = new LatLng(['lat' => -2.245933, 'lng' => 119.481006]);
         $map = new Map([
             'center' => $coord,
             'zoom' => 5,
@@ -68,69 +65,90 @@ class LembagaController extends Controller
         $marker = new Marker([
             'position' => $coord,
             'title' => 'My Home Town',
-            //'icon'=>'@web/images/icon-budget.png',
+                //'icon'=>'@web/images/icon-budget.png',
         ]);
 
         // Provide a shared InfoWindow to the marker
         $marker->attachInfoWindow(
-            new InfoWindow([
-                'content' => '<p>Sulawesi <a href="lembaga/list?id=4">(Click Here)</a></p>'
-            ])
+                new InfoWindow([
+            'content' => '<p>Sulawesi <a href="lembaga/list?id=4">(Click Here)</a></p>'
+                ])
         );
 
         // Add marker to the map
         $map->addOverlay($marker);
 
         // Lets add a marker now 2
-        $coord2 = new LatLng(['lat' => -6.121435, 'lng' => 106.774124    ]);
+        $coord2 = new LatLng(['lat' => -6.121435, 'lng' => 106.774124]);
 
         $marker = new Marker([
             'position' => $coord2,
             'title' => 'My Home Town',
-            //'icon'=>'@web/images/icon-budget.png',
+                //'icon'=>'@web/images/icon-budget.png',
         ]);
 
         // Provide a shared InfoWindow to the marker
         $marker->attachInfoWindow(
-            new InfoWindow([
-                'content' => '<p>Jakarta <a href="lembaga/list?id=3">(Click Here)</a></p>'
-            ])
+                new InfoWindow([
+            'content' => '<p>Jakarta <a href="lembaga/list?id=3">(Click Here)</a></p>'
+                ])
         );
 
         // Add marker to the map
         $map->addOverlay($marker);
 
         // Lets add a marker now 3
-        $coord3 = new LatLng(['lat' => -8.409518, 'lng' => 	115.188919    ]);
+        $coord3 = new LatLng(['lat' => -8.409518, 'lng' => 115.188919]);
 
         $marker = new Marker([
             'position' => $coord3,
             'title' => 'My Home Town',
-            //'icon'=>'@web/images/icon-budget.png',
+                //'icon'=>'@web/images/icon-budget.png',
         ]);
 
         // Provide a shared InfoWindow to the marker
         $marker->attachInfoWindow(
-            new InfoWindow([
-                'content' => '<p>Bali <a href="lembaga/list?id=4">(Click Here)</a></p>'
-            ])
+                new InfoWindow([
+            'content' => '<p>Bali <a href="'.\yii\helpers\Url::to(['/lembaga/list', 'id'=>3]).'">(Click Here)</a></p>'
+                ])
         );
 
         // Add marker to the map
         $map->addOverlay($marker);
 
         return $this->render('index', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-            'map'=>$map,
+                    'searchModel' => $searchModel,
+                    'dataProvider' => $dataProvider,
+                    'map' => $map,
+        ]);
+    }
+
+    public function actionList($id) {
+        $searchModel = new \app\models\DepartemenSearch();
+        $searchModel->id_lembaga=$id;
+        
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        return $this->render('list', [
+                    'model' => $this->findModel($id),
+                    'searchModel' => $searchModel,
+                    'dataProvider' => $dataProvider,
         ]);
     }
     
-        public function actionList($id)
-    {
-        return $this->render('list', [
-           'model' => $this->findModel($id),
-                ]);
+    public function actionDepartemen($id_lembaga, $id_departemen) {
+        
+        $searchModel = new \app\models\PenelitiSearch();
+        $searchModel->id_departemen=$id_departemen;
+        
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        return $this->render('departemen', [
+                    'model' => \app\models\Departemen::findOne($id_departemen),
+                    'searchModel' => $searchModel,
+                    'dataProvider' => $dataProvider,
+                    'id_lembaga' => $id_lembaga,
+        ]);
     }
 
     /**
@@ -138,10 +156,9 @@ class LembagaController extends Controller
      * @param integer $id
      * @return mixed
      */
-    public function actionView($id)
-    {
+    public function actionView($id) {
         return $this->render('view', [
-            'model' => $this->findModel($id),
+                    'model' => $this->findModel($id),
         ]);
     }
 
@@ -150,15 +167,14 @@ class LembagaController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate()
-    {
+    public function actionCreate() {
         $model = new Lembaga();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
-                'model' => $model,
+                        'model' => $model,
             ]);
         }
     }
@@ -169,15 +185,14 @@ class LembagaController extends Controller
      * @param integer $id
      * @return mixed
      */
-    public function actionUpdate($id)
-    {
+    public function actionUpdate($id) {
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
-                'model' => $model,
+                        'model' => $model,
             ]);
         }
     }
@@ -188,8 +203,7 @@ class LembagaController extends Controller
      * @param integer $id
      * @return mixed
      */
-    public function actionDelete($id)
-    {
+    public function actionDelete($id) {
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
@@ -202,12 +216,12 @@ class LembagaController extends Controller
      * @return Lembaga the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($id)
-    {
+    protected function findModel($id) {
         if (($model = Lembaga::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
+
 }

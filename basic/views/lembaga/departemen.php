@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\LembagaSearch */
+/* @var $searchModel app\models\BudgetSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'SIIN - Lembaga';
@@ -12,38 +12,46 @@ $this->title = 'SIIN - Lembaga';
 ?>
 <div class="lembaga-index">
 
-
     <!-- <h1><?= Html::encode($this->title) ?></h1> -->
+
+    <?php //echo $this->render('_search', ['model' => $searchModel]); ?>
     
-       <div class="row" style="padding-top: 20px; padding-bottom: 20px;">
-     <div class="col-sm-12 col-centered">
-    <?php echo $this->render('_search', ['model' => $searchModel]); ?>
-     </div>
-   </div>
+    <!-- <?= Html::a('Create Budget', ['create'], ['class' => 'btn btn-success']) ?> -->
     
-    
-      <!--  <?= Html::a('Create Lembaga', ['create'], ['class' => 'btn btn-success']) ?> -->
-      
-        <div class="row">
-      <div class="col-sm-12 col-centered">
-            <div class="absolute"><?=$map->display()?></div>
-      </div>
-    </div>
-      
-      <!--
-    <?= GridView::widget([
+    <div class="container">
+        <h1><?php echo $model -> {'nama'}; ?></h1>
+   
+        <br />
+        <div class="col-md-12">
+            <div class="well">
+                <?php echo Html::a('Semua Departemen', ['/lembaga/list', 'id'=>$id_lembaga]); ?>
+                <?php echo $model -> {'jumlah_peneliti'} . " Peneliti | " . $model -> {'jumlah_dokumen'} . " Dokumen"; ?>
+            </div>
+            
+             <?php echo $this->render('//peneliti/_search', ['model' => $searchModel]); ?>
+       
+            <?= GridView::widget([
         'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
+//        'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
-            'nama',
-            'website',
-            'jumlah_departemen',
+            //'id',
+            [
+            'label'=>'nama',
+            'format' => 'raw',
+            'value'=>function ($data) {
+             return Html::a($data->nama,['sdm/profile','id'=>3]);
+                },
+            ],
+            'jumlah_paten',
+            'jumlah_paper',
+            //'id_departemen',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            //['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
-      -->
+            
+        </div>
+    </div>
 </div>

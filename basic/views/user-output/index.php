@@ -7,30 +7,10 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\SdmSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Sdms';
+$this->title = 'SIIN - Output';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="sdm-index">
+    
 
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
-    <p>
-        <?= Html::a('Create Sdm', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
-    <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
-            'id',
-            'nama',
-            'gelar',
-            'lembaga',
-            'bidang_ilmu',
-
-            ['class' => 'yii\grid\ActionColumn'],
-        ],
-    ]); ?>
 </div>
