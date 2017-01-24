@@ -56,13 +56,21 @@ AdminAsset::register($this);
               &nbsp;<span class="">Contact</span>
             </a>
           </li>
-          
+          <?php if (Yii::$app->user->isGuest): ?>
           <li class="messages-menu">
-            <a href="<?php echo \yii\helpers\Url::to(['/site/login']); ?>" class="">
+           <a href="<?php echo \yii\helpers\Url::to(['/admin-sdm/index']); ?>" class="">
               <i class="fa fa-user-circle"></i>
               &nbsp;<span class="">Login</span>
             </a>
           </li>
+          <?php else: ?>
+           <li class="messages-menu">
+           <a href="<?php echo \yii\helpers\Url::to(['/site/logout']); ?>" class="">
+              <i class="fa fa-user-circle"></i>
+              &nbsp;<span class="">Logout (<?php echo Yii::$app->user->identity->username; ?>)</span>
+            </a>
+          </li>
+          <?php endif; ?>
         </ul>
       </div>
 

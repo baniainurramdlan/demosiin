@@ -14,7 +14,7 @@ use yii\widgets\ActiveForm;
         'action' => ['index'],
         'method' => 'get',
     ]); ?>
-
+    <!--
     <?= $form->field($model, 'id') ?>
 
     <?= $form->field($model, 'nama') ?>
@@ -22,12 +22,23 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'website') ?>
 
     <?= $form->field($model, 'jumlah_departemen') ?>
-
+    -->
+    
+      <div class="col-md-12">
+        <?= $form->field($model, 'subject') ->dropDownList ([
+        ''=>''
+        ,'bioteknologi'=>'Bioteknologi'
+        ,'biofuel'=>'Biofuel'
+        ,'meteorologi'=>'Meteorologi'
+        ])?>
+       </div>
+    
+    <!--
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
         <?= Html::resetButton('Reset', ['class' => 'btn btn-default']) ?>
     </div>
-
+    -->
     <?php ActiveForm::end(); ?>
 
 </div>

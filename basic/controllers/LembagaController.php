@@ -9,6 +9,19 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
+use dosamigos\google\maps\LatLng;
+use dosamigos\google\maps\services\DirectionsWayPoint;
+use dosamigos\google\maps\services\TravelMode;
+use dosamigos\google\maps\overlays\PolylineOptions;
+use dosamigos\google\maps\services\DirectionsRenderer;
+use dosamigos\google\maps\services\DirectionsService;
+use dosamigos\google\maps\overlays\InfoWindow;
+use dosamigos\google\maps\overlays\Marker;
+use dosamigos\google\maps\Map;
+use dosamigos\google\maps\services\DirectionsRequest;
+use dosamigos\google\maps\overlays\Polygon;
+use dosamigos\google\maps\layers\BicyclingLayer;
+
 /**
  * LembagaController implements the CRUD actions for Lembaga model.
  */
@@ -37,10 +50,79 @@ class LembagaController extends Controller
     {
         $searchModel = new LembagaSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        
+        $coord = new LatLng(['lat' => -2.245933, 'lng' => 119.481006 ]);
+        $map = new Map([
+            'center' => $coord,
+            'zoom' => 5,
+            'scrollwheel' => false,
+            'mapTypeControl' => false,
+            'scaleControl' => false,
+            'draggable' => true,
+        ]);
+
+        $map->width = '100%';
+        $map->height = 400;
+
+        // Lets add a marker now
+        $marker = new Marker([
+            'position' => $coord,
+            'title' => 'My Home Town',
+            //'icon'=>'@web/images/icon-budget.png',
+        ]);
+
+        // Provide a shared InfoWindow to the marker
+        $marker->attachInfoWindow(
+            new InfoWindow([
+                'content' => '<p>Sulawesi <a href="sdm/list">(Click Here)</a></p>'
+            ])
+        );
+
+        // Add marker to the map
+        $map->addOverlay($marker);
+
+        // Lets add a marker now 2
+        $coord2 = new LatLng(['lat' => -6.121435, 'lng' => 106.774124    ]);
+
+        $marker = new Marker([
+            'position' => $coord2,
+            'title' => 'My Home Town',
+            //'icon'=>'@web/images/icon-budget.png',
+        ]);
+
+        // Provide a shared InfoWindow to the marker
+        $marker->attachInfoWindow(
+            new InfoWindow([
+                'content' => '<p>Jakarta <a href="sdm/list">(Click Here)</a></p>'
+            ])
+        );
+
+        // Add marker to the map
+        $map->addOverlay($marker);
+
+        // Lets add a marker now 3
+        $coord3 = new LatLng(['lat' => -8.409518, 'lng' => 	115.188919    ]);
+
+        $marker = new Marker([
+            'position' => $coord3,
+            'title' => 'My Home Town',
+            //'icon'=>'@web/images/icon-budget.png',
+        ]);
+
+        // Provide a shared InfoWindow to the marker
+        $marker->attachInfoWindow(
+            new InfoWindow([
+                'content' => '<p>Bali <a href="sdm/list">(Click Here)</a></p>'
+            ])
+        );
+
+        // Add marker to the map
+        $map->addOverlay($marker);
 
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+            'map'=>$map,
         ]);
     }
 
