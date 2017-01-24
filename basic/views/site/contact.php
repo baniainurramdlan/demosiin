@@ -12,6 +12,9 @@ $this->title = 'Contact';
 //$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-contact">
+     <div class="row">
+        <div class="container">
+            <div class="col-md-12">
     <h1><?= Html::encode($this->title) ?></h1>
 
     <?php if (Yii::$app->session->hasFlash('contactFormSubmitted')): ?>
@@ -65,4 +68,7 @@ $this->title = 'Contact';
         </div>
 
     <?php endif; ?>
+        </div>
 </div>
+         </div>
+    </div>

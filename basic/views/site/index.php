@@ -10,7 +10,7 @@ $this->title = 'SIIN - Home';
 <div class="site-index">
 
     <div class="row row-centered">
-        <div class="col-centered">
+        <div class="col-md-12">
             <?=$map->display()?>
         </div>
   </div>

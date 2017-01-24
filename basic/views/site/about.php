@@ -10,6 +10,7 @@ $this->title = 'About';
 <div class="site-about">
     <div class="row">
         <div class="container">
+            <div class="col-md-12">
     <h1>Sistem Informasi Iptek Nasional</h1>
 
     <!--
@@ -33,7 +34,7 @@ $this->title = 'About';
         <li>Renstra Kemenristekdikti tahun 2015-2019,</li>
         <li>Frascatti Manual 2015.</li>
     </ul>
-  
+        </div>
         </div>
     </div>
 </div>
