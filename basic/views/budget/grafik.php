@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use sjaakp\gcharts\ColumnChart;
+
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\BudgetSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
