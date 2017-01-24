@@ -10,7 +10,7 @@ use yii\grid\GridView;
 // $this->title = 'Lembagas';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="lembaga-index" style="padding-right:1cm; padding-left:1cm;">
+<div class="container" style="padding-right:65px;">
 <div class="row">
 <div class="col-md-12">
     <div class="sdm-index">

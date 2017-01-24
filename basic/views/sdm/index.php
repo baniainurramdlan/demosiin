@@ -14,7 +14,7 @@ $this->title = 'SIIN - SDM';
 
     <!-- <h1><?= Html::encode($this->title) ?></h1> -->
     
-    <div class="row" style="padding-top: 20px; padding-bottom: 20px;">
+    <div class="row" style="padding-right:65px;">>
      <div class="col-sm-12 col-centered">
     <?php echo $this->render('_search', ['model' => $searchModel]); ?>
      </div>

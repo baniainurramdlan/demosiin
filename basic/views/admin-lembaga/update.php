@@ -10,7 +10,8 @@ $this->params['breadcrumbs'][] = ['label' => 'Lembagas', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
-<div class="row" style="padding-right:1.5cm; padding-left:0.8cm; padding-top:0.5cm;">
+<div class="container" style="padding-right:65px;">
+<div class="row" >
 	<div class="col-md-12">
     	<div class="sdm-index">
     		<h2>
@@ -36,4 +37,4 @@ $this->params['breadcrumbs'][] = 'Update';
 		</div>
 	</div>
 </div>
-
+</div>

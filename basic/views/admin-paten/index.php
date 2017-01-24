@@ -10,7 +10,7 @@ use yii\grid\GridView;
 $this->title = 'Patens';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="paten-index" style="padding-right:1cm; padding-left:1cm;">
+<div class="paten-index container" style="padding-right:65px;">
 <div class="row">
 <div class="col-md-12">
 <div class="sdm-index">

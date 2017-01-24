@@ -12,7 +12,7 @@ use fedemotta\datatables\DataTables;
 
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="container" style="padding-right:1.5cm; padding-left:0.8cm;">
+<div class="container" style="padding-right:65px;">
 <div class="row">
 <div class="col-md-12">
     <div class="sdm-index">

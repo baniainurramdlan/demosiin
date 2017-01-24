@@ -10,7 +10,7 @@ use yii\widgets\DetailView;
 $this->params['breadcrumbs'][] = ['label' => 'Sdms', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="sdm-view" style="padding-right:1.5cm; padding-left:0.8cm; padding-top:0.5cm;">
+<div class="sdm-view container" style="padding-right:65px;">
     <h2>
     Detail Data SDM
     <!-- <small>Version 2.0</small> -->

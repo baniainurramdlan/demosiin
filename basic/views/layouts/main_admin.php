@@ -85,7 +85,8 @@ AdminAsset::register($this);
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="img/Koala.jpg" class="img-circle" alt="User Image">
+        <!--   <img src="img/Koala.jpg" class="img-circle" alt="User Image">  -->
+            <?= Html::img("@web/img/Koala.jpg", ['alt'=>'User Image', 'class'=>'img-circle', ]);?>
         </div>
         <div class="pull-left info">
           <p>Admin SIIN</p>
