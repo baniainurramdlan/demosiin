@@ -6,6 +6,7 @@ use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use app\models\Budget;
+use yii\data\ArrayDataProvider;
 
 /**
  * BudgetSearch represents the model behind the search form about `app\models\Budget`.
@@ -76,10 +77,37 @@ class BudgetSearch extends Budget
 
         // add conditions that should always apply here
 
-        $dataProvider = new ActiveDataProvider([
-            'query' => $query,
-        ]);
+        // $dataProvider = new ActiveDataProvider([
+        //     'query' => $query,
+        // ]);
 
+        $data = [
+          [
+            'id' => 3,
+            'tahun' => 2015,
+            'APBN' => 5000000,
+            'apbd' => 4000000,
+            'ln' => 3000000,
+          ],
+          [
+            'id' => 2,
+            'tahun' => 2016,
+            'APBN' => 3000000,
+            'apbd' => 2000000,
+            'ln' => 500000,
+          ],
+            [
+              'id' => 1,
+              'tahun' => 2017,
+              'APBN' => 8000000,
+              'apbd' => 1000000,
+              'ln' => 1000000,
+            ],
+        ];
+
+        $dataProvider = new ArrayDataProvider([
+            'allModels' => $data,
+        ]);
         return $dataProvider;
     }
 }

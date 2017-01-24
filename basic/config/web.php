@@ -7,20 +7,23 @@ $config = [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'components' => [
-            'assetManager' => [
-        'bundles' => [
-            'dosamigos\google\maps\MapAsset' => [
-                'options' => [
-                    'key' => 'AIzaSyAdykaew-W5Ay69WYUZB4zjdd0B0_ODg10',
-                    'language' => 'id',
-                    'version' => '3.1.18'
+        'assetManager' => [
+            'bundles' => [
+                'dosamigos\google\maps\MapAsset' => [
+                    'options' => [
+                        'key' => 'AIzaSyAdykaew-W5Ay69WYUZB4zjdd0B0_ODg10',
+                        'language' => 'id',
+                        'version' => '3.1.18'
+                    ]
                 ]
             ]
-        ]
-    ],
+        ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'WovaPGAmg5wHagF3kpaNcSBc70k5W8ui',
+            'parsers' => [
+                'application/json' => 'yii\web\JsonParser',
+            ]
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -42,23 +45,37 @@ $config = [
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
-                [
+                    [
                     'class' => 'yii\log\FileTarget',
                     'levels' => ['error', 'warning'],
                 ],
             ],
         ],
         'db' => require(__DIR__ . '/db.php'),
-        /*
         'urlManager' => [
             'enablePrettyUrl' => true,
+            'enableStrictParsing' => false,
             'showScriptName' => false,
             'rules' => [
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => 'v1/sdm',   // our country api rule,
+                    'tokens' => [
+                        '{id}' => '<id:\\w+>'
+                    ],
+                    'extraPatterns' => ['GET search' => 'search']
+                ]
             ],
         ],
-        */
+        
     ],
     'params' => $params,
+    'modules' => [
+        'v1' => [
+            'basePath' => '@app/modules/v1',
+            'class' => 'app\modules\v1\V1',
+        ],
+    ],
 ];
 
 if (YII_ENV_DEV) {

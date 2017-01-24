@@ -7,9 +7,9 @@ use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
-use app\assets\AppAsset;
+use app\assets\AdminAsset;
 
-AppAsset::register($this);
+AdminAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -21,52 +21,61 @@ AppAsset::register($this);
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
-<body>
+<body class="hold-transition skin-blue sidebar-mini">
 <?php $this->beginBody() ?>
 
-<div class="wrap">
-    <?php
-    NavBar::begin([
-        'brandLabel' => 'Sistem Informasi Iptek Nasional ( SIIN )',
-        'brandUrl' => Yii::$app->homeUrl,
-        'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
-        ],
-    ]);
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
-        'items' => [
-            ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'About Us', 'url' => ['/site/about']],
-            ['label' => 'Contact Us', 'url' => ['/site/contact']],
-            Yii::$app->user->isGuest ? (
-                ['label' => 'Login', 'url' => ['/site/login']]
-            ) : (
-                '<li>'
-                . Html::beginForm(['/site/logout'], 'post')
-                . Html::submitButton(
-                    'Logout (' . Yii::$app->user->identity->username . ')',
-                    ['class' => 'btn btn-link logout']
-                )
-                . Html::endForm()
-                . '</li>'
-            )
-        ],
-    ]);
-    NavBar::end();
-    ?>
+<div class="wrapper">
+  <header class="main-header">
 
-    <div class="container">
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-        <?= $content ?>
+    <a href="index2.html" class="logo">
+      <span class="logo-mini"><b>S</b>IIN</span>
+       <span class="logo-lg"><b></b>SIIN</span>
+    </a>
+
+    <nav class="navbar navbar-static-top">
+        
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <li class="messages-menu">
+            <a href="<?php echo \yii\helpers\Url::to(['index']); ?>" class="">
+              <i class="fa fa-home"></i>
+              &nbsp;<span class="">Home</span>
+            </a>
+          </li>
+          <!-- Notifications: style can be found in dropdown.less -->
+          <li class="messages-menu">
+            <a href="<?php echo \yii\helpers\Url::to(['about']); ?>" class="">
+              <i class="fa fa-black-tie"></i>
+              &nbsp;<span class="">About Us</span>
+            </a>
+          </li>
+         
+          <li class="messages-menu">
+            <a href="<?php echo \yii\helpers\Url::to(['contact']); ?>" class="">
+              <i class="fa fa-address-book-o"></i>
+              &nbsp;<span class="">Contact</span>
+            </a>
+          </li>
+          
+          <li class="messages-menu">
+            <a href="<?php echo \yii\helpers\Url::to(['login']); ?>" class="">
+              <i class="fa fa-user-circle"></i>
+              &nbsp;<span class="">Login</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+    <div class="" style="background-color: #ecf0f1;">
+    <?= $content ?>
     </div>
 </div>
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; ristekdikti <?= date('Y') ?></p>
+        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
 
         <p class="pull-right"><?= Yii::powered() ?></p>
     </div>
