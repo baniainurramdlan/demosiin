@@ -19,10 +19,14 @@ $this->title = 'SIIN - Budget';
     <p>
         <!-- <?= Html::a('Create Budget', ['create'], ['class' => 'btn btn-success']) ?> -->
     </p>
-
-    <p>
-        Dana : Rp. 10.000.000 &nbsp; <a type="button" class="btn btn-primary btn-sm" href="index.php?r=budget/grafik"><span class="glyphicon glyphicon-stats" aria-hidden="true"> Grafik</a></span>
-    </p>
+    
+    <div class="container">
+        <div class="row">
+          <div class="col-md-6"> Dana : Rp. 10.000.000 &nbsp; <a type="button" class="btn btn-primary btn-sm" href="<?php echo \yii\helpers\Url::to(['/budget/grafik']); ?>"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span>&nbsp; Grafik</a></div>
+          <div class="col-md-6"><span class="pull-right"><a type="button" class="btn btn-success btn-sm" href="<?php echo \yii\helpers\Url::to(['/budget/']); ?>"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>&nbsp; Kembali</a></span></div>
+        </div>
+    </div>  
+    
     <br />
     <?= GridView::widget([
         'dataProvider' => $dataProvider,

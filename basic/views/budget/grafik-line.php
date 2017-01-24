@@ -20,7 +20,7 @@ $this->title = 'SIIN - Grafik Line';
     </p>
 
     <p>
-        Dana : Rp. 10.000.000 &nbsp; <a type="button" class="btn btn-primary btn-sm" href="index.php?r=budget/list"><span class="glyphicon glyphicon-stats" aria-hidden="true"> List</a></span>
+        Dana : Rp. 10.000.000 &nbsp; <a type="button" class="btn btn-primary btn-sm" href="<?php echo \yii\helpers\Url::to(['/budget/list']); ?>"><span class="glyphicon glyphicon-stats" aria-hidden="true">&nbsp;</span>List</a>
     </p>
     <div class="row">
     <div class="container">

@@ -20,24 +20,24 @@ $this->title = 'SIIN - Home';
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <center><a class="btn btn-default" href="<?php echo \yii\helpers\Url::to(['/budget']); ?>">
+                <center><a style=" border:0px solid transparent;" class="btn btn-default" href="<?php echo \yii\helpers\Url::to(['/budget']); ?>">
                   <?php echo Html::img('@web/images/budget.png', ['width'=>'100']) ?>
-                  Budget &raquo;</a></center>
+                  <br /><br /><strong>Budget &raquo;</strong></a></center>
             </div>
             <div class="col-md-3">
-                <center><a class="btn btn-default" href="<?php echo \yii\helpers\Url::to(['/sdm']); ?>">
+                <center><a style=" border:0px solid transparent;" class="btn btn-default" href="<?php echo \yii\helpers\Url::to(['/sdm']); ?>">
                   <?php echo Html::img('@web/images/sdm.png', ['width'=>'50', 'height'=>'50']) ?>
-                  SDM &raquo;</a></center>
+                  <br /><br /><strong>SDM &raquo;</strong></a></center>
             </div>
             <div class="col-md-3">
-                <center><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">
+                <center><a style=" border:0px solid transparent;" class="btn btn-default" href="http://www.yiiframework.com/extensions/">
                   <?php echo Html::img('@web/images/lembaga.png', ['width'=>'50', 'height'=>'50']) ?>
-                  Lembaga &raquo;</a></center>
+                  <br /><br /><strong>Lembaga &raquo;</strong></a></center>
             </div>
             <div class="col-md-3">
-                <center><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">
+                <center><a style=" border:0px solid transparent;" class="btn btn-default" href="http://www.yiiframework.com/extensions/">
                   <?php echo Html::img('@web/images/output.png', ['width'=>'50', 'height'=>'50']) ?>
-                  Output &raquo;</a></center>
+                  <br /><br /><strong>Output &raquo;</strong></a></center>
             </div>
         </div>
 
