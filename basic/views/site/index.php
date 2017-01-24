@@ -33,7 +33,7 @@ $this->title = 'SIIN - Home';
                   <br /><br /><strong>Lembaga &raquo;</strong></a></center>
             </div>
             <div class="col-md-3">
-                <center><a style="background-color: #ecf0f1; border:0px solid transparent;" class="btn btn-default" href="<?php echo \yii\helpers\Url::to(['/output']); ?>">
+                <center><a style="background-color: #ecf0f1; border:0px solid transparent;" class="btn btn-default" href="<?php echo \yii\helpers\Url::to(['/user-output']); ?>">
                   <?php echo Html::img('@web/images/output.png', ['width'=>'50', 'height'=>'50']) ?>
                   <br /><br /><strong>Output &raquo;</strong></a></center>
             </div>
