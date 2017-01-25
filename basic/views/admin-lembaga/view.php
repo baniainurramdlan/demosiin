@@ -18,7 +18,6 @@ $this->params['breadcrumbs'][] = $this->title;
   <ol class="breadcrumb">
     <li><a href="<?php echo \yii\helpers\Url::to(['/admin']); ?>"><i class="fa fa-home"></i> Home</a></li>
     <li class="active">Lembaga</li>
-    <li><a href="#"><i class="fa fa-dashboard"></i>Home</a></li>
     <li class="active">View</li>
     <li class="active">Lembaga 1</li>
   </ol>

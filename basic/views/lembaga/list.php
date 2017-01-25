@@ -20,7 +20,7 @@ $this->title = 'SIIN - Lembaga';
     
     <div class="container">
         <h1><?php echo $model -> {'nama'}; ?></h1>
-        <h4><?php echo "<a href=http://www.".$model -> {'website'}.">" .$model -> {'website'}."</a>"; ?></h4>
+        <h4><?php echo "<a href=".$model -> {'website'}.">" .$model -> {'website'}."</a>"; ?></h4>
         <br />
         <div class="col-md-12">
             <div class="well">
