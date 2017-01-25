@@ -85,24 +85,7 @@ class SiteController extends Controller {
 
         $map->width = '100%';
         $map->height = 400;
-
-        // Lets add a marker now
-        $marker = new Marker([
-            'position' => $coord,
-            'title' => 'Sistem Informasi Iptek Nasional',
-            //'icon'=>'@web/images/icon-budget.png',
-        ]);
-
-        // Provide a shared InfoWindow to the marker
-        $marker->attachInfoWindow(
-            new InfoWindow([
-                'content' => '<center><p><h3>Welcome to Sistem Informasi Iptek Nasional<br /><a href="'.\yii\helpers\Url::to(['/site/about']).'">(Click Here)</a></h3></p></center>'
-            ])
-        );
-
-        // Add marker to the map
-        $map->addOverlay($marker);
-
+        
         return $this->render('index',[
             'map'=>$map,
         ]);
