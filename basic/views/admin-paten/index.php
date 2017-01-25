@@ -15,10 +15,10 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="col-md-12">
 <div class="sdm-index">
 
-    <h1>Output</h1>
+    <h1>Aktivitas</h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i>Home</a></li>
-        <li class="active">Output</li>
+        <li class="active">Aktivitas
       </ol>
 
     <?php echo $this->render('_search', ['model' => $searchModel]); ?>

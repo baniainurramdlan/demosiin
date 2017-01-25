@@ -17,7 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
   
   <ol class="breadcrumb">
     <li><a href="#"><i class="fa fa-home"></i>Home</a></li>
-    <li class="active">Detail data lembaga</li>
+    <li class="active">Detail data paten</li>
   </ol>
     <p>
         <div class="sdm-index">
