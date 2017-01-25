@@ -24,8 +24,8 @@ $this->title = 'SIIN - Lembaga';
         <br />
         <div class="col-md-12">
             <div class="well">
-                <?php echo Html::a('Semua Departemen', ['/lembaga/list', 'id'=>$id_lembaga]); ?>
-                <?php echo $model -> {'jumlah_peneliti'} . " Peneliti | " . $model -> {'jumlah_dokumen'} . " Dokumen"; ?>
+                <?php echo Html::a('<span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> &nbsp; Semua Departemen', ['/lembaga/list', 'id'=>$id_lembaga]); ?>
+                <?php echo " &nbsp;|&nbsp; " . $model -> {'jumlah_peneliti'} . " Peneliti &nbsp;|&nbsp; " . $model -> {'jumlah_dokumen'} . " Dokumen"; ?>
             </div>
             
              <?php echo $this->render('//peneliti/_search', ['model' => $searchModel]); ?>
