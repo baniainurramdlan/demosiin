@@ -12,6 +12,30 @@ use yii\filters\VerbFilter;
 
 class AdminController extends \yii\web\Controller
 {
+    public function behaviors()
+    {
+        return [
+            'verbs' => [
+                'class' => VerbFilter::className(),
+                'actions' => [
+                    'delete' => ['POST'],
+                ],
+            ],
+              'access' => [
+                'class' => \yii\filters\AccessControl::className(),
+                'only' => ['index'],
+                'rules' => [
+
+                    [
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+
+                ],
+
+            ],
+        ];
+    }
     
     public function actionIndex()
     {

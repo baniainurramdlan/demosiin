@@ -39,9 +39,15 @@ $this->title = 'Login';
             <div class="col-lg-offset-1 col-lg-11">
                 <?= Html::submitButton('Login', ['class' => 'btn btn-primary', 'name' => 'login-button']) ?>
             </div>
+            <div class="col-lg-offset-1 col-lg-11">
+                <br />
+                *) Untuk demo gunakan username : admin dan password : admin
+            </div>
         </div>
 
     <?php ActiveForm::end(); ?>
+    
+    
 
     <!--
     <div class="col-lg-offset-1" style="color:#999;">

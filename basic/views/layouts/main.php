@@ -58,7 +58,7 @@ AppAsset::register($this);
           </li>
           <?php if (Yii::$app->user->isGuest): ?>
           <li class="messages-menu">
-           <a href="<?php echo \yii\helpers\Url::to(['/admin-sdm/index']); ?>" class="">
+           <a href="<?php echo \yii\helpers\Url::to(['/admin/index']); ?>" class="">
               <i class="fa fa-user-circle"></i>
               &nbsp;<span class="">Login</span>
             </a>
