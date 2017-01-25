@@ -10,7 +10,7 @@ $this->params['breadcrumbs'][] = ['label' => 'Patens', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
-<div class="paten-update container" style="padding-right:65px;">
+<div class="paten-update container" style="padding-right:50px;">
 	<div class="row" >
 	 <div class="col-md-12">
 	  	<div class="lembaga-update">
@@ -20,7 +20,8 @@ $this->params['breadcrumbs'][] = 'Update';
 			  </h2><br>
 			  <ol class="breadcrumb">
 			    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-			    <li class="active">Aktivitas</li>
+			    <li class="active">Aktivitas 1</li>
+			    <li class="active">Update</li>
 			  </ol>
 				<div class="box">
         			<div class="box-header with-border">
