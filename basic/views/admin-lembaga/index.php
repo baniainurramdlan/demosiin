@@ -10,15 +10,15 @@ use yii\grid\GridView;
 $this->title = 'SIIN - Lembaga';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="container" style="padding-right:65px;">
+<div class="container" style="padding-right:50px;">
 <div class="row">
 <div class="col-md-12">
     <div class="sdm-index">
 
-    <h1> Lembaga</h1>
+    <h2> Lembaga</h2>
   <ol class="breadcrumb">
-    <li><a href="#"><i class=""></i>Lembaga 1</a></li>
-    <li class="active">Lembaga 2</li>
+    <li><a href="#"><i class="fa fa-dashboard"></i>Home</a></li>
+    <li class="active">Lembaga</li>
   </ol>
     <?php  echo $this->render('_search', ['model' => $searchModel]); ?>
   <div class="box">

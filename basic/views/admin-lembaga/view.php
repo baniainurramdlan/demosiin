@@ -10,14 +10,15 @@ use yii\widgets\DetailView;
 $this->params['breadcrumbs'][] = ['label' => 'Lembagas', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="output-view container"  style="padding-right:65px;">
+<div class="output-view container"  style="padding-right:50px;">
     <h2>
     Detail Data Lembaga
   </h2><br>
   
   <ol class="breadcrumb">
-    <li><a href="#"><i class=""></i>Lembaga 1</a></li>
-    <li class="active">Lembaga 2</li>
+    <li><a href="#"><i class="fa fa-dashboard"></i>Home</a></li>
+    <li class="active">View</li>
+    <li class="active">Lembaga 1</li>
   </ol>
     <h1><?= Html::encode($this->title) ?></h1>
 
