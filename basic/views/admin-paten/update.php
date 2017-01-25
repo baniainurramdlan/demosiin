@@ -19,7 +19,7 @@ $this->params['breadcrumbs'][] = 'Update';
 			    <!-- <small>Version 2.0</small> -->
 			  </h2><br>
 			  <ol class="breadcrumb">
-			    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+			    <li><a href="<?php echo \yii\helpers\Url::to(['/admin']); ?>"><i class="fa fa-dashboard"></i> Home</a></li>
 			    <li class="active">Aktivitas</li>
 			  </ol>
 				<div class="box">

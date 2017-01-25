@@ -21,7 +21,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <!-- <small>Version 2.0</small> -->
   </h1>
   <ol class="breadcrumb">
-    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+    <li><a href="<?php echo \yii\helpers\Url::to(['/admin']); ?>"><i class="fa fa-dashboard"></i> Home</a></li>
     <li class="active">SDM</li>
   </ol>
 
@@ -37,7 +37,13 @@ $this->params['breadcrumbs'][] = $this->title;
                 ['class' => 'yii\grid\SerialColumn'],
 
                 // 'id',
-                'nama',
+                [
+           'label'=>'nama',
+           'format' => 'raw',
+       'value'=>function ($data) {
+            return Html::a($data->nama,['admin-sdm/profile','id'=>$data->id]);
+        },
+    ],
                 'gelar',
                 'lembaga',
                 'bidang_ilmu',

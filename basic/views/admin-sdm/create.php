@@ -8,16 +8,16 @@ use yii\helpers\Html;
 ?>
 
 <?php
-$this->title = 'Create Sdm';
+$this->title = 'SIIN - Create SDM';
 $this->params['breadcrumbs'][] = ['label' => 'Sdms', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="container" style="padding-right:50px;">
 <div class="row">
 	<div class="col-md-12">
-			   <h2><?= Html::encode($this->title) ?></h2><br>
+			   <h2>Create SDM</h2><br>
 			   	  <ol class="breadcrumb">
-				    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+				    <li><a href="<?php echo \yii\helpers\Url::to(['/admin']); ?>"><i class="fa fa-dashboard"></i> Home</a></li>
 				    <li class="active">SDM</li>
 				    <li class="active">Create</li>
 				  </ol>

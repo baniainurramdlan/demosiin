@@ -17,8 +17,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1> Lembaga</h1>
   <ol class="breadcrumb">
-    <li><a href="#"><i class=""></i>Lembaga 1</a></li>
-    <li class="active">Lembaga 2</li>
+    <li><a href="<?php echo \yii\helpers\Url::to(['/admin']); ?>"><i class="fa fa-home"></i> Home</a></li>
+    <li class="active">Lembaga</li>
   </ol>
     <?php  echo $this->render('_search', ['model' => $searchModel]); ?>
   <div class="box">

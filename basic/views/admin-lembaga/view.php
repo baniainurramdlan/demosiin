@@ -16,8 +16,8 @@ $this->params['breadcrumbs'][] = $this->title;
   </h2><br>
   
   <ol class="breadcrumb">
-    <li><a href="#"><i class=""></i>Lembaga 1</a></li>
-    <li class="active">Lembaga 2</li>
+    <li><a href="<?php echo \yii\helpers\Url::to(['/admin']); ?>"><i class="fa fa-home"></i> Home</a></li>
+    <li class="active">Lembaga</li>
   </ol>
     <h1><?= Html::encode($this->title) ?></h1>
 

@@ -56,6 +56,13 @@ class AdminSdmController extends Controller
             'dataProvider' => $dataProvider,
         ]);
     }
+    
+        public function actionProfile($id)
+    {
+       return $this->render('profile', [
+            'model' => $this->findModel($id),
+        ]);
+    }
 
     /**
      * Displays a single Sdm model.

@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="sdm-index">
     <h2>User Manajemen</h2>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i>Home</a></li>
+        <li><a href="<?php echo \yii\helpers\Url::to(['/admin']); ?>"><i class="fa fa-dashboard"></i> Home</a></li>
         <li class="active">User Manajemen</li>
       </ol>
         <div class="box">
