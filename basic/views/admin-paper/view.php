@@ -12,12 +12,13 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="paper-view container" style="padding-right:65px;">
       <h2>
-    Detail Data paper
+    Detail Data Output
   </h2><br>
   
-  <ol class="breadcrumb">
-    <li><a href="#"><i class="fa fa-home"></i>Home</a></li>
-    <li class="active">Detail data paper</li>
+   <ol class="breadcrumb">
+    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+    <li class="active">Output</li>
+     <li class="active">View 1</li>
   </ol>
     <p>
         <div class="sdm-index">

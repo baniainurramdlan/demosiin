@@ -15,12 +15,13 @@ $this->params['breadcrumbs'][] = 'Update';
 	 <div class="col-md-12">
 	  	<div class="lembaga-update">
 	  		<h2>
-			    Update Data Output Paper
+			    Update Data Output 
 			    <!-- <small>Version 2.0</small> -->
 			  </h2><br>
 			  <ol class="breadcrumb">
 			    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-			    <li class="active">Paper</li>
+			    <li class="active">Output</li>
+			     <li class="active">Update</li>
 			  </ol>
 				<div class="box">
         			<div class="box-header with-border">
