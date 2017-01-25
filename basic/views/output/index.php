@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\SdmSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-// $this->title = 'Sdms';
+$this->title = 'SIIN - Output';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="lembaga-index container" style="padding-right:65px;">
@@ -19,8 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <li><a href="#"><i class="fa fa-dashboard"></i>Home</a></li>
         <li class="active">Output</li>
       </ol>
-
-    <h1><?= Html::encode($this->title) ?></h1>
+    
     <?php  echo $this->render('_search', ['model' => $searchModel]); ?>
     <div class="box">
         <div class="box-header with-border">

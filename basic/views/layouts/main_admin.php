@@ -135,7 +135,7 @@ AdminAsset::register($this);
           </a>
         </li>
         <li>
-          <a href="<?php echo \yii\helpers\Url::to(['/output']); ?>">
+          <a href="<?php echo \yii\helpers\Url::to(['/admin-paper']); ?>">
             <i class="fa fa-file-text"></i> <span>Output</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-green"></small>

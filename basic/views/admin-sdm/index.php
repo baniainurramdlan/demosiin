@@ -8,7 +8,7 @@ use fedemotta\datatables\DataTables;
 /* @var $searchModel app\models\SdmSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-// $this->title = 'Sdms';
+$this->title = 'SIIN - Admin';
 
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -25,7 +25,6 @@ $this->params['breadcrumbs'][] = $this->title;
     <li class="active">SDM</li>
   </ol>
 
-    <h1><?= Html::encode($this->title) ?></h1>
     <?php  echo $this->render('_search', ['model' => $searchModel]); ?>
     <div class="box">
         <div class="box-header with-border">

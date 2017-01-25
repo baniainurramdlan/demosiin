@@ -4,27 +4,28 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\models\LembagaSearch */
+/* @var $searchModel app\models\PatenSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'SIIN - Lembaga';
+$this->title = 'Papers';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="container" style="padding-right:65px;">
+<div class="paper-index container" style="padding-right:65px;">
 <div class="row">
 <div class="col-md-12">
-    <div class="sdm-index">
+<div class="sdm-index">
 
-    <h1> Lembaga</h1>
-  <ol class="breadcrumb">
-    <li><a href="#"><i class=""></i>Lembaga 1</a></li>
-    <li class="active">Lembaga 2</li>
-  </ol>
-    <?php  echo $this->render('_search', ['model' => $searchModel]); ?>
-  <div class="box">
+    <h1>Output</h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i>Home</a></li>
+        <li class="active">Output</li>
+      </ol>
+
+    <?php echo $this->render('_search', ['model' => $searchModel]); ?>
+    <div class="box">
         <div class="box-header with-border">
     <p>
-        <?= Html::a('Create Lembaga', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Paper', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
@@ -34,8 +35,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
             // 'id',
             'nama',
-            'website',
-            'jumlah_departemen',
+            'lembaga',
+            'bidang_ilmu',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
