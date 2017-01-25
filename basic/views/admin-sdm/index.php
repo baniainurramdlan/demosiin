@@ -12,7 +12,7 @@ $this->title = 'SIIN - Admin';
 
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="container" style="padding-right:65px;">
+<div class="container" style="padding-right:49px;">
 <div class="row">
 <div class="col-md-12">
     <div class="sdm-index">
@@ -26,7 +26,7 @@ $this->params['breadcrumbs'][] = $this->title;
   </ol>
 
     <?php  echo $this->render('_search', ['model' => $searchModel]); ?>
-    <div class="box">
+    <div class="box" style="width:100%">
         <div class="box-header with-border">
             <p><?= Html::a('Create Sdm', ['create'], ['class' => 'btn btn-success']) ?></p>
 

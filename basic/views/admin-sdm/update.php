@@ -12,14 +12,16 @@ $this->params['breadcrumbs'][] = 'Update';
 ?>
 <div class="row" >
 	<div class="col-md-12">
-    	<div class="sdm-index container" style="padding-right:65px;">
+    	<div class="sdm-index container" style="padding-right:50px;">
     		  <h2>
-			    Update Data SDM
+			    Update SDM
 			    <!-- <small>Version 2.0</small> -->
 			  </h2><br>
 			  <ol class="breadcrumb">
 			    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
 			    <li class="active">SDM</li>
+			    <li class="active">Update</li>
+
 			  </ol>
 			<div class="sdm-update">
 				<div class="box">
