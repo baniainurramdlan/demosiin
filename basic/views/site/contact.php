@@ -42,18 +42,21 @@ $this->title = 'Contact';
         </p>
 
         <div class="row">
-            <div class="col-lg-5">
+            <div class="col-md-12">
 
                 <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
-
+                <div class="col-md-6">
+                    <div class="col-md-6">
                     <?= $form->field($model, 'name')->textInput(['autofocus' => true]) ?>
-
+                    </div>
+                    <div class="col-md-6">
                     <?= $form->field($model, 'email') ?>
-
+                    </div>
+                    <div class="col-md-12">
                     <?= $form->field($model, 'subject') ?>
 
-                    <?= $form->field($model, 'body')->textarea(['rows' => 6]) ?>
-
+                    <?= $form->field($model, 'body')->textarea(['rows' => 4]) ?>
+   
                     <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
                         'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
                     ]) ?>
@@ -61,7 +64,9 @@ $this->title = 'Contact';
                     <div class="form-group">
                         <?= Html::submitButton('Submit', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
                     </div>
-
+                    </div>
+                </div>
+                
                 <?php ActiveForm::end(); ?>
 
             </div>

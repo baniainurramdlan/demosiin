@@ -62,8 +62,10 @@ class LembagaController extends Controller {
         $map->height = 400;
 
         // Lets add a marker now
+       $coord1 = new LatLng(['lat' => -1.609972,  'lng' => 103.607254]);
+        
         $marker = new Marker([
-            'position' => $coord,
+            'position' => $coord1,
             'title' => 'My Home Town',
                 //'icon'=>'@web/images/icon-budget.png',
         ]);
@@ -71,7 +73,7 @@ class LembagaController extends Controller {
         // Provide a shared InfoWindow to the marker
         $marker->attachInfoWindow(
                 new InfoWindow([
-            'content' => '<p>Sulawesi <a href="'.\yii\helpers\Url::to(['/lembaga/list', 'id'=>3]).'">(Click Here)</a></p>'
+            'content' => '<p>Jambi <a href="'.\yii\helpers\Url::to(['/lembaga/list', 'id'=>3]).'">(Click Here)</a></p>'
                 ])
         );
 
@@ -79,7 +81,7 @@ class LembagaController extends Controller {
         $map->addOverlay($marker);
 
         // Lets add a marker now 2
-        $coord2 = new LatLng(['lat' => -6.121435, 'lng' => 106.774124]);
+        $coord2 = new LatLng(['lat' => -6.914744,  'lng' =>107.609810]);
 
         $marker = new Marker([
             'position' => $coord2,
@@ -90,7 +92,7 @@ class LembagaController extends Controller {
         // Provide a shared InfoWindow to the marker
         $marker->attachInfoWindow(
                 new InfoWindow([
-            'content' => '<p>Jakarta <a href="'.\yii\helpers\Url::to(['/lembaga/list', 'id'=>3]).'">(Click Here)</a></p>'
+            'content' => '<p>Bandung <a href="'.\yii\helpers\Url::to(['/lembaga/list', 'id'=>3]).'">(Click Here)</a></p>'
                 ])
         );
 
@@ -98,7 +100,7 @@ class LembagaController extends Controller {
         $map->addOverlay($marker);
 
         // Lets add a marker now 3
-        $coord3 = new LatLng(['lat' => -8.409518, 'lng' => 115.188919]);
+        $coord3 = new LatLng(['lat' => 	-3.336583,	'lng' => 127.099457 ]);
 
         $marker = new Marker([
             'position' => $coord3,
@@ -109,7 +111,7 @@ class LembagaController extends Controller {
         // Provide a shared InfoWindow to the marker
         $marker->attachInfoWindow(
                 new InfoWindow([
-            'content' => '<p>Bali <a href="'.\yii\helpers\Url::to(['/lembaga/list', 'id'=>3]).'">(Click Here)</a></p>'
+            'content' => '<p>Maluku <a href="'.\yii\helpers\Url::to(['/lembaga/list', 'id'=>3]).'">(Click Here)</a></p>'
                 ])
         );
 
