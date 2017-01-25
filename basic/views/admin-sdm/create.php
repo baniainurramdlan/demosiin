@@ -12,11 +12,11 @@ $this->title = 'Create Sdm';
 $this->params['breadcrumbs'][] = ['label' => 'Sdms', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-
+<div class="container" style="padding-right:50px;">
 <div class="row">
 	<div class="col-md-12">
 			   <h1><?= Html::encode($this->title) ?></h1>
-			   		 <div class="box box-info">
+			   		 <div class="box box-info" >
 		       			<div class="box-header with-border">
 					 		<div class="box-header with-border">
 							    <?= $this->render('_form', [
@@ -28,3 +28,4 @@ $this->params['breadcrumbs'][] = $this->title;
 	</div>
 </div>
 			
+</div>
