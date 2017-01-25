@@ -12,12 +12,19 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="paper-view container" style="padding-right:65px;">
       <h2>
-    Detail Data paper
+    Detail Data Output
   </h2><br>
   
+<<<<<<< HEAD
   <ol class="breadcrumb">
     <li><a href="<?php echo \yii\helpers\Url::to(['/admin']); ?>"><i class="fa fa-home"></i> Home</a></li>
     <li class="active">Detail data paper</li>
+=======
+   <ol class="breadcrumb">
+    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+    <li class="active">Output</li>
+     <li class="active">View 1</li>
+>>>>>>> 5ad61751d829aa297e65f910759e6fee9fe7e2fe
   </ol>
     <p>
         <div class="sdm-index">

@@ -27,7 +27,7 @@ AdminAsset::register($this);
 <div class="wrapper">
   <header class="main-header">
 
-    <a href="<?php echo \yii\helpers\Url::to(['/site/index']); ?>" class="logo">
+    <a href="<?php echo \yii\helpers\Url::to(['/admin']); ?>" class="logo">
       <span class="logo-mini"><b>S</b>IIN</span>
        <span class="logo-lg"><b></b>SIIN (logo)</span>
     </a>

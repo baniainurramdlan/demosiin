@@ -15,7 +15,12 @@ $this->params['breadcrumbs'][] = $this->title;
 	<div class="col-md-12">
 		<div class="lembaga-create">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h2><?= Html::encode($this->title) ?></h2>
+    	<ol class="breadcrumb">
+		    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+		    <li class="active">Lembaga</li>
+		    <li class="active">Create</li>
+		  </ol>
 			<div class="box box-info" >
 		       			<div class="box-header with-border">
 					 		<div class="box-header with-border">

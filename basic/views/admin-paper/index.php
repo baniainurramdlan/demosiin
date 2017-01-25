@@ -10,7 +10,7 @@ use yii\grid\GridView;
 $this->title = 'Papers';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="paper-index container" style="padding-right:65px;">
+<div class="paper-index container" style="padding-right:50px;">
 <div class="row">
 <div class="col-md-12">
 <div class="sdm-index">
