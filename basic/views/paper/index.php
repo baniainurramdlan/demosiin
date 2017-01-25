@@ -12,24 +12,36 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="paper-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
-    <p>
-        <?= Html::a('Create Paper', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
+       <div class="row" style="padding-top: 20px; padding-bottom: 20px;">
+        <div class="container">
+            <p>
+            <a type="button" class="btn btn-primary" href="<?php echo \yii\helpers\Url::to(['/paper']); ?>" disabled><span class="glyphicon glyphicon-paper" aria-hidden="true"></span>Paper</a>         
+    
+            &nbsp; | &nbsp;<a type="button" class="btn btn-primary" href="<?php echo \yii\helpers\Url::to(['/paten']); ?>"><span class="glyphicon glyphicon-block" aria-hidden="true"></span>Paten</a>          
+            </p>
+            <br />
+            <p>
+        <?php echo $this->render('_search', ['model' => $searchModel]); ?>
+            </p>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="container">
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
+        //'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
+            //'id',
             'nama',
             'lembaga',
             'bidang_ilmu',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            //['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
+            </div>
+                </div>
 </div>
