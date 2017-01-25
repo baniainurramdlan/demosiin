@@ -16,14 +16,11 @@ $this->params['breadcrumbs'][] = $this->title;
   </h2><br>
   
   <ol class="breadcrumb">
-<<<<<<< HEAD
     <li><a href="<?php echo \yii\helpers\Url::to(['/admin']); ?>"><i class="fa fa-home"></i> Home</a></li>
     <li class="active">Detail data paten</li>
-=======
     <li><a href="#"><i class="fa fa-dashboard"></i>Home</a></li>
     <li class="active">Aktivitas 1</li>
     <li class="active">View</li>
->>>>>>> origin/master
   </ol>
     <p>
         <div class="sdm-index">
