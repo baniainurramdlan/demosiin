@@ -10,7 +10,7 @@ $this->params['breadcrumbs'][] = ['label' => 'Patens', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
-<div class="paten-update container" style="padding-right:65px;">
+<div class="paten-update container" style="padding-right:50px;">
 	<div class="row" >
 	 <div class="col-md-12">
 	  	<div class="lembaga-update">
@@ -19,8 +19,14 @@ $this->params['breadcrumbs'][] = 'Update';
 			    <!-- <small>Version 2.0</small> -->
 			  </h2><br>
 			  <ol class="breadcrumb">
+<<<<<<< HEAD
 			    <li><a href="<?php echo \yii\helpers\Url::to(['/admin']); ?>"><i class="fa fa-dashboard"></i> Home</a></li>
 			    <li class="active">Aktivitas</li>
+=======
+			    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+			    <li class="active">Aktivitas 1</li>
+			    <li class="active">Update</li>
+>>>>>>> origin/master
 			  </ol>
 				<div class="box">
         			<div class="box-header with-border">
