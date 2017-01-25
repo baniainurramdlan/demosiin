@@ -71,7 +71,7 @@ class LembagaController extends Controller {
         // Provide a shared InfoWindow to the marker
         $marker->attachInfoWindow(
                 new InfoWindow([
-            'content' => '<p>Sulawesi <a href="lembaga/list?id=4">(Click Here)</a></p>'
+            'content' => '<p>Sulawesi <a href="'.\yii\helpers\Url::to(['/lembaga/list', 'id'=>3]).'">(Click Here)</a></p>'
                 ])
         );
 
@@ -90,7 +90,7 @@ class LembagaController extends Controller {
         // Provide a shared InfoWindow to the marker
         $marker->attachInfoWindow(
                 new InfoWindow([
-            'content' => '<p>Jakarta <a href="lembaga/list?id=3">(Click Here)</a></p>'
+            'content' => '<p>Jakarta <a href="'.\yii\helpers\Url::to(['/lembaga/list', 'id'=>3]).'">(Click Here)</a></p>'
                 ])
         );
 

@@ -27,7 +27,7 @@ AdminAsset::register($this);
 <div class="wrapper">
   <header class="main-header">
 
-    <a href="index2.html" class="logo">
+    <a href="<?php echo \yii\helpers\Url::to(['/site/index']); ?>" class="logo">
       <span class="logo-mini"><b>S</b>IIN</span>
        <span class="logo-lg"><b></b>SIIN (logo)</span>
     </a>
@@ -36,6 +36,7 @@ AdminAsset::register($this);
       <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
         <span class="sr-only">Toggle navigation</span>
       </a>
+        
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
           <li class="messages-menu">

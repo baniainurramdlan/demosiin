@@ -75,7 +75,7 @@ class BudgetController extends Controller
         // Provide a shared InfoWindow to the marker
         $marker->attachInfoWindow(
             new InfoWindow([
-                'content' => '<p>11.000.000 Meteorologi Ristekdikti <a href="budget/list">(Click Here)</a></p>'
+                'content' => '<p>11.000.000 Meteorologi Ristekdikti <a href="'.\yii\helpers\Url::to(['/budget/list']).'">(Click Here)</a></p>'
             ])
         );
 
@@ -95,7 +95,7 @@ class BudgetController extends Controller
         // Provide a shared InfoWindow to the marker
         $marker->attachInfoWindow(
             new InfoWindow([
-                'content' => '<p>20.000.000 Bioteknologi Unicef <a href="budget/list">(Click Here)</a></p>'
+                'content' => '<p>20.000.000 Bioteknologi Unicef <a href="'.\yii\helpers\Url::to(['/budget/list']).'">(Click Here)</a></p>'
             ])
         );
 
@@ -114,7 +114,7 @@ class BudgetController extends Controller
         // Provide a shared InfoWindow to the marker
         $marker->attachInfoWindow(
             new InfoWindow([
-                'content' => '<p>30.000.000 Geologi Biofuel <a href="budget/list">(Click Here)</a></p>'
+                'content' => '<p>30.000.000 Geologi Biofuel <a href="'.\yii\helpers\Url::to(['/budget/list']).'">(Click Here)</a></p>'
             ])
         );
 

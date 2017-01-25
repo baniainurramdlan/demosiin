@@ -29,6 +29,13 @@ use yii\widgets\ActiveForm;
       ,'itb'=>'ITB'
       ])?>
     </div>
+    
+    <div class="col-md-12">
+    <?= $form->field($model, 'nama', [
+           'inputOptions' => ['autofocus' => 'autofocus', 'class' => 'form-control transparent']
+     ])->textInput()->input('name', ['placeholder' => "Search..."])->label(false); ?>
+    </div>
+    
     <!--
     <?= $form->field($model, 'id') ?>
 
@@ -38,12 +45,12 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'bidang_ilmu') ?>
 -->
-<!--
+
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
-        <?= Html::resetButton('Reset', ['class' => 'btn btn-default']) ?>
+        <?= Html::a('Reset',['/paper'], ['class' => 'btn btn-default']) ?>
     </div>
--->
+
     <?php ActiveForm::end(); ?>
 
 </div>

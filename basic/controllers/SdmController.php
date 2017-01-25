@@ -74,7 +74,7 @@ class SdmController extends Controller
         // Provide a shared InfoWindow to the marker
         $marker->attachInfoWindow(
             new InfoWindow([
-                'content' => '<p>Sulawesi <a href="sdm/list">(Click Here)</a></p>'
+                'content' => '<p>Sulawesi <a href="'.\yii\helpers\Url::to(['/sdm/list']).'">(Click Here)</a></p>'
             ])
         );
 
@@ -93,7 +93,7 @@ class SdmController extends Controller
         // Provide a shared InfoWindow to the marker
         $marker->attachInfoWindow(
             new InfoWindow([
-                'content' => '<p>Jakarta <a href="sdm/list">(Click Here)</a></p>'
+                'content' => '<p>Jakarta <a href="'.\yii\helpers\Url::to(['/sdm/list']).'">(Click Here)</a></p>'
             ])
         );
 
@@ -112,7 +112,7 @@ class SdmController extends Controller
         // Provide a shared InfoWindow to the marker
         $marker->attachInfoWindow(
             new InfoWindow([
-                'content' => '<p>Bali <a href="sdm/list">(Click Here)</a></p>'
+                'content' => '<p>Bali <a href="'.\yii\helpers\Url::to(['/sdm/list']).'">(Click Here)</a></p>'
             ])
         );
 

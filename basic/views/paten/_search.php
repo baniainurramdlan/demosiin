@@ -29,12 +29,19 @@ use yii\widgets\ActiveForm;
       ,'itb'=>'ITB'
       ])?>
     </div>
-    <!--
+    
+    <div class="col-md-12">
+    <?= $form->field($model, 'nama', [
+           'inputOptions' => ['autofocus' => 'autofocus', 'class' => 'form-control transparent']
+     ])->textInput()->input('name', ['placeholder' => "Search..."])->label(false); ?>
+    </div>
+    
+
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
-        <?= Html::resetButton('Reset', ['class' => 'btn btn-default']) ?>
+        <?= Html::a('Reset',['/paten'], ['class' => 'btn btn-default']) ?>
     </div>
-    -->
+
     <?php ActiveForm::end(); ?>
 
 </div>
